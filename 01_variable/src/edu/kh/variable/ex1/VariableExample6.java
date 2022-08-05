@@ -5,5 +5,8 @@ public class VariableExample6 {
 		
 		System.out.println("실험");
 		System.out.println("실험");
+		
+		System.out.println("실험");
+		
 	}
 }
