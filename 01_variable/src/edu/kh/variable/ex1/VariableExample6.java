@@ -47,6 +47,7 @@ public class VariableExample6 {
 		
 		System.out.println("20220806 테스트");
 		System.out.println("20220807 테스트");
+		System.out.println("20220808 테스트");
 		
 	}
 }
