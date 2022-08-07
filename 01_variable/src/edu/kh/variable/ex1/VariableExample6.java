@@ -46,6 +46,7 @@ public class VariableExample6 {
 		System.out.println( name + "님 오늘 하루도 고생하셨습니다.");
 		
 		System.out.println("20220806 테스트");
+		System.out.println("20220807 테스트");
 		
 	}
 }
