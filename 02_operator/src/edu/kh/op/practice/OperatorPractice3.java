@@ -33,7 +33,7 @@ public class OperatorPractice3 {
 		
 		int input1 = sc.nextInt();
 		
-		//                조건식       ?  true인 경우  :  false인 경우
+		//                조건식        ?  true인 경우   :  false인 경우
 		String result1 = (input1 == 0) ?     "0"      : (input1 > 0 ? "양수" : "음수");
 		
 		
@@ -43,7 +43,7 @@ public class OperatorPractice3 {
 		
 		int input2 = sc.nextInt();
 		
-		//                조건식       ?  true인 경우  :  false인 경우
+		//                조건식         ?  true인 경우  :  false인 경우
 		String result2 = (input2 == 0) ?     "0"      : (input2 > 0 ? "양수" : "음수");
 		
 		
