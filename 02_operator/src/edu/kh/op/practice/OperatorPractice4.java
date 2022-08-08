@@ -6,7 +6,6 @@ public class OperatorPractice4 {
 
 	public static void main(String[] args) {
 		
-		
 		Scanner sc = new Scanner(System.in);
 		
 		/* 국어, 영어, 수학에 대한 점수를 키보드를 이용해 정수로 입력 받고,
@@ -24,29 +23,28 @@ public class OperatorPractice4 {
 		
 		System.out.println("세 과목에 대한 합계와 평균을 구하세요.");
 		
-		System.out.print("국어 점수 : ");
+		System.out.print("국어 : ");
 		int input1 = sc.nextInt();
 		
-		System.out.print("영어 점수 : ");
+		System.out.print("영어 : ");
 		int input2 = sc.nextInt();
 		
-		System.out.print("수학 점수 : ");
+		System.out.print("수학 : ");
 		int input3 = sc.nextInt();
 		
-		System.out.printf( "합계 : %d + %d + %d = %d \n"  , input1, input2, input3, input1 + input2 + input3);
+		// 합계를 저장하기 위한 변수
+		int sum = input1 + input2 + input3;
 		
-		System.out.printf( "평균 : %d + %d + %d = %d \n" , input1, input2, input3, input1 + input2 + input3);
+		// 평균을 저장하기 위한 변수
+		double avg = sum / 3.0;
 		
+		System.out.println("합계 : " + sum);
 		
-		int input4 = sc.nextInt();
+		System.out.println("평균 : " + avg);
 		
-		String result = (input1 >= 40 && input4 >= 60) ? "합격"  : "불합격";
+		String result = (input1 >= 40 && input2 >= 40 && input3 >= 40 && avg >= 60) ? "합격" : "불합격";
 		
 		System.out.println(result);
-		
-		
-		
-		
+			
 	}
-
 }
