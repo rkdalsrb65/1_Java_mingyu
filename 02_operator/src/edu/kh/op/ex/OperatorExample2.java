@@ -53,7 +53,6 @@ public class OperatorExample2 {
         System.out.printf("a = %d, b= %d, c=%d \n", a,b,c);
         
         
-        
 	}
 
 }
