@@ -6,7 +6,7 @@ public class OperatorExample1 {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner
+		Scanner sc = new Scanner(System.in);
 		
 		
 		// 5 / 3 = 1 (몫)
