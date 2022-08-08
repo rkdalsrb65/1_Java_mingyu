@@ -77,5 +77,6 @@ public class ConditionExample {
 		
 		System.out.println("[if문 예시 2 종료]");
 		
+		
 		}
 	}
