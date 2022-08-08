@@ -19,19 +19,15 @@ public class OperatorPractice1 {
         남는 사탕 개수 : 13                                                  */
 
 		
-		int a = 29;
-		int b = 100;
-		
-		
 		System.out.print("인원 수 : ");
 		int input1 = sc.nextInt();
 		
 		System.out.print("사탕 개수 : ");
 		int input2 = sc.nextInt();
 		
-		System.out.println("1인당 사탕 개수 : " + b/a);
+		System.out.println("1인당 사탕 개수 : " + input2/input1);
 		
-		System.out.println("남는 사탕 개수 : " + b%a);
+		System.out.println("남는 사탕 개수 : " + input2%input1);
 		
 		
 		

@@ -37,15 +37,12 @@ public class OperatorPractice4 {
 		
 		System.out.printf( "평균 : %d + %d + %d = %d \n" , input1, input2, input3, input1 + input2 + input3);
 		
-		System.out.print("합격 : ");
 		
 		int input4 = sc.nextInt();
 		
 		String result = (input1 >= 40 && input4 >= 60) ? "합격"  : "불합격";
 		
 		System.out.println(result);
-		
-		
 		
 		
 		
