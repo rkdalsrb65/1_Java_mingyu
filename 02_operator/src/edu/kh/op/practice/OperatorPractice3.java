@@ -34,7 +34,7 @@ public class OperatorPractice3 {
 		int input1 = sc.nextInt();
 		
 		//                조건식       ?  true인 경우  :  false인 경우
-		String result1 = (input == 0) ?     "0"      : (input1 > 0 ? "양수" : "음수");
+		String result1 = (input1 == 0) ?     "0"      : (input1 > 0 ? "양수" : "음수");
 		
 		
 		System.out.println(result1 + " 입니다.");		
