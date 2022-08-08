@@ -74,15 +74,8 @@ public class ConditionExample {
 				System.out.println("짝수 입니다.");
 			}
 		}
-			
+		
 		System.out.println("[if문 예시 2 종료]");
-			
+		
 		}
-		
-		
 	}
-	
-	
-	
-	
-	
