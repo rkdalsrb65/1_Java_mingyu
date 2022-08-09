@@ -239,5 +239,5 @@ public class SwitchExample {
 		System.out.println(season);
 				
 	}
-	
+
 }
