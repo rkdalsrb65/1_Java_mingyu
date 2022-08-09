@@ -151,15 +151,16 @@ public class ConditionPractice {
 		double attendance = sc.nextInt();
 		
 		// 각각의 점수를 비율에 맞게 변경
-		midTerm = midTerm/0.2;       // midTerm    *= 0.2;
-		finalTerm = finalTerm/0.3;   // finalTerm  *= 0.3;
-		report = report/0.3;         // report     *= 0.3;
-		attendance = (attendance*5)/0.2; // attendance *= 5 * 0.2;
+		midTerm = midTerm*0.2;       // midTerm    *= 0.2;
+		finalTerm = finalTerm*0.3;   // finalTerm  *= 0.3;
+		report = report*0.3;         // report     *= 0.3;
+		attendance = (attendance*5)*0.2; // attendance *= 5 * 0.2;
 		
 		System.out.println("=========결과=========");
 		
-		if(attendance < 120 * (1 - 0.3) ) { // 14번 이하 출석 했을 경우
-			System.out.println("[출석 횟수 부족] (" + attendance + "/20)");
+		if(attendance <= 20 * (1 - 0.3) ) { // 14번 이하 출석 했을 경우
+			System.out.println("Fail [출석 횟수 부족] (" + (int)attendance + "/20)");
+			                                      // 소수점 버림 처리
 		} else { // 출석 만족
 			System.out.printf("중간 고사 점수(20) : %.1f \n" , midTerm);
 			System.out.printf("기말 고사 점수(20) : %.1f \n" , finalTerm);
