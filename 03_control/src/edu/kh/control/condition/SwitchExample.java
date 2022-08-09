@@ -153,9 +153,97 @@ public class SwitchExample {
 		
 	}
 	
+	public void ex4() {
+		// 산술 연산 계산기 만들기
+		// 두 정수(int)와 1개의 연산자(+ - * / % (String) )를 입력 받아서 연산 결과를 출력
+		// 단, 나누기(/)연산 시 0으로는 나눌 수 없도록 한다.
+		
+		// int result; // 결과 저장 변수
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수1 입력 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("연산자 입력 : ");
+		String op = sc.next();
+		
+		System.out.print("정수2 입력 : ");
+		int num2 = sc.nextInt();
+		
+		String result = sc.next();
+		
+		switch(op) {
+//		case "+" : System.out.println(num1 + "+" + num2 + " = " + (num1 + num2)); break;
+		case "+" : System.out.printf("%d %s %d = %d \n", num1, op, num2, num1 + num2); break;
+		case "-" : System.out.printf("%d %s %d = %d \n", num1, op, num2, num1 - num2); break;
+		case "*" : System.out.printf("%d %s %d = %d \n", num1, op, num2, num1 * num2); break;
+		case "/" : if(num2 == 0) {
+			System.out.println("0으로 나눌 수 없습니다."); 
+		} else {
+			System.out.printf("%d %s %d = %d \n", num1, op, num2, num1 / num2);} break;
+		case "%" : System.out.printf("%d %s %d = %d \n", num1, op, num2, num1 % num2); break;
+		default : System.out.println("존재하지않는 연산자입니다."); // 연산자를 잘못 입력한 경우
+		}
+		
+		// [실행 화면]
+		// 정수1 입력 : 5
+		// 연산자 입력 : +
+		// 정수2 입력 : 4
+		// 5 + 4 = 9
+		
+		// [실행 화면]
+		// 정수1 입력 : 5
+		// 연산자 입력 : /
+		// 정수2 입력 : 0
+		// 0으로는 나눌 수 없습니다.
+		
+		// [실행 화면]
+		// 정수1 입력 : 5
+		// 연산자 입력 : @
+		// 정수2 입력 : 3
+		// 존재하지 않는 연산자 입니다.		
+		
+		
+	}
 	
-	
-	
-	
+	public void ex5() {
+		
+		// switch문의 break 역할
+		
+		// 계절 판별(switch 버전)
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("달 입력 : ");
+		int month = sc.nextInt();
+		
+		String season;
+		
+		switch(month) {
+		case 3 : season = "봄"; break;
+		case 4 : season = "봄"; break;
+		case 5 : season = "봄"; break;
+		
+		case 6 : season = "여름"; break;
+		case 7 : season = "여름"; break;
+		case 8 : season = "여름"; break;
+		
+		case 9 : season = "가을"; break;
+		case 10 : season = "가을"; break;
+		case 11 : season = "가을"; break;
+		
+		case 12 : season = "겨울"; break;
+		case 1 : season = "겨울"; break;
+		case 2 : season = "겨울"; break;
+		
+		default : season = "잘못 입력 하셨습니다.";
+		}
+		
+		System.out.println(season);
+		
+		
+	}
 	
 }
