@@ -15,7 +15,10 @@ public class LoopPracticeRun {
 //		lp.LoopPractice6(); ****************
 //		lp.LoopPractice7();
 //		lp.LoopPractice8();
-		lp.LoopPractice9();
+//		lp.LoopPractice9(); ****************
+//		lp.LoopPractice10(); ****************
+//		lp.LoopPractice11(); ****************
+		lp.LoopPractice12();
 		
 		
 		

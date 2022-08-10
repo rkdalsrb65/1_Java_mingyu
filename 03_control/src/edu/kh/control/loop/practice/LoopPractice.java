@@ -217,15 +217,18 @@ public class LoopPractice {
 
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();			
+//		
+//		for(int row = 1; row <= input; row++) {
+//			for(int col = 1; col <= row; col++) {
+//				System.out.print("*");
+//			}
+//			System.out.println(); // 줄 바꿈 (개행)
+//		}
 		
-		for(int row = 1; row <= input; row++) {
-			for(int col = 1; col <= row; col++) {
-				System.out.print("*");
-			}
-			System.out.println(); // 줄 바꿈 (개행)
-		}
-		
-
+		System.out.println(" "+" "+" "+"*");
+		System.out.println(" "+" "+"*"+"*");
+		System.out.println(" "+"*"+"*"+"*");
+		System.out.println("*"+"*"+"*"+"*");
 		
 		
 	}
@@ -233,9 +236,67 @@ public class LoopPractice {
 	
 	
 	
-//	public void LoopPractice10()
-//	public void LoopPractice11()
-//	public void LoopPractice12()
+	public void LoopPractice10() {
+		
+//		메소드 명 : public void practice10(){}
+//		다음과 같은 실행 예제를 구현하세요.
+		
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();		
+		
+		System.out.println("*");
+		System.out.println("**");
+		System.out.println("***");
+		System.out.println("**");		
+		System.out.println("*");		
+		
+		
+		
+		
+	}
+	public void LoopPractice11() {
+//		메소드 명 : public void practice11(){}
+//		다음과 같은 실행 예제를 구현하세요.
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();				
+		
+		System.out.println(" "+" "+" "+"*"+" "+" "+" ");
+		System.out.println(" "+" "+"*"+"*"+"*"+" "+" ");
+		System.out.println(" "+"*"+"*"+"*"+"*"+"*"+" ");
+		System.out.println("*"+"*"+"*"+"*"+"*"+"*"+"*");
+		
+		
+		
+		
+	}
+	public void LoopPractice12() {
+		
+//		메소드 명 : public void practice12(){}
+//		다음과 같은 실행 예제를 구현하세요.	
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();				
+		
+		System.out.println("*"+"*"+"*"+"*"+"*");
+		System.out.println("*"+" "+" "+" "+"*");
+		System.out.println("*"+" "+" "+" "+"*");
+		System.out.println("*"+" "+" "+" "+"*");
+		System.out.println("*"+"*"+"*"+"*"+"*");	
+		
+		
+		
+		
+		
+		
+	}
 	public void LoopPractice13() {
 		
 //		메소드 명 : public void practice13(){}
@@ -246,9 +307,9 @@ public class LoopPractice {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("정수 입력 : ");
-		int input = sc.nextInt();		
+		int input = sc.nextInt();	
 		
-		int count = 0;		
+		int count = 0;
 		
 		if(i % 2 == 0 && i % 3 == 0) {
 			
