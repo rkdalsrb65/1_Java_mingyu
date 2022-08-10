@@ -236,5 +236,32 @@ public class LoopPractice {
 //	public void LoopPractice10()
 //	public void LoopPractice11()
 //	public void LoopPractice12()
-//	public void LoopPractice13()
+	public void LoopPractice13() {
+		
+//		메소드 명 : public void practice13(){}
+//		1부터 사용자에게 입력 받은 수까지 중에서
+//		1) 2와 3의 배수를 모두 출력하고
+//		2) 2와 3의 공배수의 개수를 출력하세요.
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();		
+		
+		int count = 0;		
+		
+		if(i % 2 == 0 && i % 3 == 0) {
+			
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }
