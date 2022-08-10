@@ -214,4 +214,58 @@ public class ForExample {
 	
 	}
 	
+	public void ex10() { // [응용]
+		
+		// for, if, Scanner, 논리연산자, print 메서드
+		
+		// 구구단 출력
+		
+		// 2 ~ 9 사이 수를 하나 입력 받아
+		// 해당하는 수의 단을 출력
+		// 단, 입력 받은 수가 2 ~ 9 사이가 아니라면
+		// "잘못 입력하셨습니다." 출력
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("단(2~9) 입력 : ");
+		int dan = sc.nextInt();
+		
+		if(dan < 2 || dan > 9) { // dan이 2~9사이가 아니라면
+			} else {
+				System.out.println("잘못 입력하셨습니다.");
+				
+				// 2 X 1 = 2
+				// 2 X 2 = 4
+				// 2 X 3 = 6
+				// 2 X 4 = 8
+				// 2 X 5 = 10
+				// ...
+				// 2 X 9 = 18
+				
+				for(int i = 1; i <= 9; i++) {
+					
+					System.out.printf("%d X %d = %d \n" , dan, i, dan * i);
+				}
+				
+				System.out.println("===================");
+				
+				// 역순 출력
+				// 2 X 9 = 18
+				// 2 X 8 = 16
+				// 2 X 7 = 14
+				// 2 X 6 = 12
+				// 2 X 5 = 10
+				// ...
+				// 2 X 1 = 2
+				
+				for(int i = 9; i >= 1; i--) {
+					System.out.printf("%d X %d = %d \n" , dan, i, dan * i);
+				}
+				
+			}
+		
+		}
+	
+
+	
 }
