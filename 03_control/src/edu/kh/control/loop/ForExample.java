@@ -99,7 +99,74 @@ public class ForExample {
 		System.out.printf("%d부터 %d까지의 합 : %d \n" , num1, num2, sum);
 	}
 	
+	public void ex4() {
+		
+		// for 기초 사용법 4
+		
+		// 1부터 100까지 3씩 증가하며 출력
+		// 1 4 7 10 13 16 19 22 25 28 31 . . .
+		
+		// 3씩 증가 == 1++ == i = i+3 -> i += 3
+		for(int i = 1; i <= 100; i = i+3) {
+			System.out.print(i + " ");
+		}
+		
+		System.out.println("\n==============");
+		
+		// 10부터 20까지 0.5씩 증가
+		
+		for(double i = 10; i <= 20; i = i+0.5) {
+			System.out.print(i + " ");
+		}
+		
+	}
 	
+	public void ex5() {		
+		// for문 + char + 자동/강제형변환 응용
+		
+		// A ~ Z 까지 출력
+		
+//		for(int i = 'A'; i <= 'Z'; i++) {
+//			System.out.println( (char)i );
+//		}
+		for(char i = 'A'; i <= 'Z'; i++) {
+		System.out.println(i);
+	}
+		}
 	
+	public void ex6() { // [응용]
+		
+		// 10부터 1까지 1씩 감소하면서 출력
+
+		for(int i = 10; i >= 1; i--) {
+
+		//조건식이 true인 경우에 수행될 코드
+		System.out.println(i);
+		}
+
+	}
 	
+	public void ex7() { // [응용]
+
+		// 입력, sum, for 응용
+
+		// 정수 5개를 입력 받아서 합계 구하기
+
+		Scanner sc = new Scanner(System.in);
+
+		int sum = 0; // 합계 저장용 변수
+
+		for(int i= 1; i <=5; i++) {
+
+		System.out.print("입력 "+ i + " : ");
+		sum += sc.nextInt();
+		// 입력 버퍼에서 다음 정수를 얻어와 sum 변수에 누적
+
+		System.out.println("합계 : " + sum);		
+
+	}
+	
+}
+
+
 }
