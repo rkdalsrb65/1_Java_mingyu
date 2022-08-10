@@ -303,10 +303,11 @@ public class ForExample {
 		for(int dan=2; dan<=9; dan++) {
 			
 			for(int i = 1; i <= 9; i++) {
-				System.out.printf("%dX%d=%d " , dan, i, dan*i);
+				System.out.printf("%dX%d=%2d " , dan, i, dan*i);
+				// %2d : 정수가 출력될 칸을 2칸 확보하고 오른쪽 정렬하여 출력
 				}	
 			
-			System.out.println(); // 줄 바꿈
+			System.out.println(); // 줄 바꿈 (개행)
 			
 		}
 		
