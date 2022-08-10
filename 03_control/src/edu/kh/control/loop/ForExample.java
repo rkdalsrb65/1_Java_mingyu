@@ -167,6 +167,51 @@ public class ForExample {
 	}
 	
 }
+	public void ex8() { // [응용]
+		
+		// ex7 응용
+		// 정수를 몇 번 입력 받을지 먼저 입력 받고
+		// 입력된 정수의 합계를 출력
+		
+		Scanner sc = new Scanner(System.in);
 
+		int sum = 0; // 합계 저장용 변수
 
+		
+		System.out.print("입력 받을 정수의 개수 : ");
+		int random = sc.nextInt();
+		
+		
+		
+		for(int i = 1; i <= random; i++) {
+
+		System.out.print("입력 " + i + " : ");
+		
+		sum += sc.nextInt();
+		// 입력 버퍼에서 다음 정수를 얻어와 sum 변수에 누적
+
+	}		
+		
+		System.out.println("합계 : " + sum);
+		
+	}
+	
+	public void ex9() { // [기초]
+		
+		// 1부터 20까지 1씩 증가하며 출력
+		// 단, 5의 배수에는 ()를 붙여서 출력
+		
+		for(int i = 1; i <= 20; i++) {
+			
+			if(i % 5 == 0) { // 5의 배수인 경우
+				System.out.println("("+i+")");
+			}else { // 5의 배수가 아닌 경우
+			
+			System.out.println(i + " ");
+		}
+	
+	}
+	
+	}
+	
 }
