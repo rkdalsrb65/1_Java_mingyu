@@ -15,6 +15,11 @@ public class LoopRun {
 		
 		ForExample forEx = new ForExample();
 
+//		forEx.ex1();
+//		forEx.ex2();
+		forEx.ex3();
+		
+		
 	}
 
 }
