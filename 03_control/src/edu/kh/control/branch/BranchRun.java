@@ -13,7 +13,7 @@ public class BranchRun {
 //		breanchEx.ex3();
 //		breanchEx.ex4();
 //		breanchEx.ex5();
-		breanchEx.upDownGame();
+//		breanchEx.upDownGame();
 		
 	}
 	
