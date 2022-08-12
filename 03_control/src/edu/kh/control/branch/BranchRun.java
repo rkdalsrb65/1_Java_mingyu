@@ -16,7 +16,7 @@ public class BranchRun {
 //		breanchEx.upDownGame();
 		
 		
-		breanchEx.rpsGame();
+//		breanchEx.rpsGame();
 		
 	}
 	

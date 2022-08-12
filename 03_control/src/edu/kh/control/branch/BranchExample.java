@@ -239,6 +239,10 @@ public class BranchExample {
 			String com = null; // String의 기본 값
 			// null : 없다(비슷)
 			
+			// String s1 = null; 참조X
+			// String s2 =   ""; 빈 문자열
+			
+			
 			switch(ran) {
 			case 0 : com = "가위"; break;
 			case 1 : com = "바위"; break;
@@ -266,7 +270,6 @@ public class BranchExample {
 				boolean win1 = player.equals("가위") && com.equals("보");
 				boolean win2 = player.equals("바위") && com.equals("가위");
 				boolean win3 = player.equals("보") && com.equals("바위");
-				
 				
 				// 이기는 경우
 //				if(player.equals(com)) {
