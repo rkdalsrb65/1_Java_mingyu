@@ -9,6 +9,9 @@ public class ArrayExample {
 	 * */
 	
 	
+	// 변수 : 1개의 자료형, 1개의 값 저장
+	// 배열 : 1개의 자료형, n개의 값 저장
+	
 	
 	public void ex1() {
 		
@@ -49,6 +52,24 @@ public class ArrayExample {
 		System.out.println(sum2);
 	}
 	
+	// int[] arr = new int[4]; -> int[]을 참조하는 변수 arr(int[] 시작 주소를 저장) = Heap 영역에 int형 변수 4개짜리 배열 할당(생성)
+	
+	
+	public void ex2() {
+		
+		// int[]을 참조하는 변수 arr 선언
+
+		int[] arr; // 배열 시작 주소를 저장하는 변수 (참조형, 4byte)
+		
+		arr = new int[4]; // heap 영역에 int형 변수 4개짜리 배열을 할당(생성)
+		                  // 할당된 배열의 시작주소를 arr에 대입
+		
+		// 배열 길이(크기) : 4
+		System.out.println("배열 길이 : " + arr.length);
+		
+		
+		
+	}
 	
 	
 }
