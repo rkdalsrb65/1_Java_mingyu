@@ -28,7 +28,7 @@ public class VariableExample4 {
 		double result = num3 + num4;
 		// 300 + 1.1
 		// 300.0(double) + 1.1(double)
-		// = 301.1(doubel)
+		// = 301.1(double)
 		
 		System.out.println(result);
 		
