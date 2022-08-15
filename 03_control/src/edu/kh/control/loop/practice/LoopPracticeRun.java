@@ -13,8 +13,8 @@ public class LoopPracticeRun {
 //		lp.LoopPractice4();
 //		lp.LoopPractice5();
 //		lp.LoopPractice6();
-		lp.LoopPractice7();
-		lp.LoopPractice8();
+//		lp.LoopPractice7();
+//		lp.LoopPractice8();
 //		lp.LoopPractice9();
 //		lp.LoopPractice10();
 //		lp.LoopPractice11();
@@ -24,10 +24,10 @@ public class LoopPracticeRun {
 
 		WhileExample whileEx = new WhileExample();
 		
-//		whileEx.ex1();
-//		whileEx.ex2();
-//		whileEx.ex3();
-//		whileEx.ex4();
+		whileEx.ex1();
+		whileEx.ex2();
+		whileEx.ex3();
+		whileEx.ex4();
 		
 		
 	}

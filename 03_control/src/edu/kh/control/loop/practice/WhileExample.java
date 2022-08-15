@@ -25,7 +25,7 @@ public class WhileExample {
 		
 		// 1부터 10까지 출력 (while / for)
 		
-		for(int i=1 ; i<10 ; i++) {
+		for(int i=1 ; i<=10 ; i++) {
 			System.out.println(i);
 		}
 		
@@ -215,12 +215,6 @@ public class WhileExample {
 	
 	
 
-		
-		
-		
-		
-		
-		
 		
 		
 		
