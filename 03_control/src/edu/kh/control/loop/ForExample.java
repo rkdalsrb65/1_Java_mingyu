@@ -413,7 +413,8 @@ public class ForExample {
 		// ****
 		// *****
 	
-		// row == 행(한 줄) , column == 열(한 칸)
+		// row    == 행(한 줄) == 가로
+		// column == 열(한 칸) == 세로
 		
 		for(int row = 1; row <= 5; row++) {
 			for(int col = 1; col <= row; col++) {
