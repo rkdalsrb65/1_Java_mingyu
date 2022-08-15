@@ -60,7 +60,7 @@ public class VariableExample2 {
 		/* char 자료형은 숫자-문자 형태의 문자표에서
 	       일치하는 문자나 숫자의 문자 부분만 출력 */
 		
-		// syso + catl + space -> println() 자동완성
+		// syso + ctrl + space -> println() 자동완성
 		System.out.println(booleanData);
 		System.out.println(iNum);
 		System.out.println(longNum);     // L 또는 l
