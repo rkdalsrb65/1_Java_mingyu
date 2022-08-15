@@ -16,15 +16,13 @@ public class LoopPractice {
 		System.out.print("1 이상의 숫자를 입력하세요 : ");
 		int input = sc.nextInt();
 		
-		if(input < 1) { 
-			System.out.print("1 이상의 숫자를 입력해주세요.");
+		if(input >= 1) { 
+			for (int i = 1; i <= input; i++) {
+				System.out.print(i + " ");
+			}
+		} else {
+			System.out.println("1 이상의 숫자를 입력해주세요.");
 		}
-		for(int i = 1; i <= input; i++) {
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();
-		
 	}
 	
 	public void LoopPractice2() {
@@ -39,39 +37,36 @@ public class LoopPractice {
 		System.out.print("1 이상의 숫자를 입력하세요 : ");
 		int input = sc.nextInt();
 		
-		if(input < 1) { 
-			System.out.print("1 이상의 숫자를 입력해주세요.");
+		if (input >= 1) {
+			for (int i = input; i >= 1; i--) {
+				System.out.print(i + " ");
+			}
+		} else {
+			System.out.println("1 이상의 숫자를 입력해주세요.");
 		}
-		for(int i = input; i >= 1; i--) {
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();		
-		
 	}
 
 	public void LoopPractice3() {
 
 //		메소드 명 : public void practice3(){}
 //		1부터 사용자에게 입력 받은 수까지의 정수들의 합을 for문을 이용하여 출력하세요.		
-		
+
 		Scanner sc = new Scanner(System.in);
-
-		int sum = 0; // 합계 저장용 변수
-
+		
 		System.out.print("정수를 하나 입력하세요 : ");
-		int input = sc.nextInt();
+		int num = sc.nextInt();
 		
-
-		for(int i = 1; i <= input; i++) {
-			
-			System.out.printf(i + " + ");
-		// 입력 버퍼에서 다음 정수를 얻어와 sum 변수에 누적
+		int sum = 0;
+		
+		for(int i=1 ; i <= num ; i++) {
 			sum += i;
-	}		
-
-		System.out.println(": " + sum);
-		
+			
+			if(i < num) {
+				System.out.print(i + " + ");
+			} else {
+				System.out.println(i + " = " + sum);
+			}
+		}
 	}
 	
 	public void LoopPractice4() {
@@ -151,27 +146,12 @@ public class LoopPractice {
 		System.out.print("숫자 : ");
 		int dan = sc.nextInt();		
 		
-		if(dan < 1 || dan > 9) { // dan이 2~9사이가 아니라면
-			System.out.println("잘못 입력하셨습니다.");
-			} else {
-				System.out.println("====="+dan+" 단 "+"=====");
-			}
-		{ for(int i = 1; i <= 9; i++) {
-				
-
-				System.out.printf("%d X %d = %d \n" , dan, i, dan * i);
-			}
-			System.out.println(); // 줄 바꿈 (개행)
-			
-		}		
-		
-		
-		
-		
-		
-		
-		
+		System.out.printf("===== %d단 =====\n", dan);
+		for(int i = 1; i < 10; i++) {			
+			System.out.printf("%d * %d = %d%n", dan, i, (dan * i));
+		}
 	}
+		
 	
 	public void LoopPractice6() {
 		
@@ -237,8 +217,8 @@ public class LoopPractice {
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();			
 		
-		for(int x = input; x >= 1; x--) {
-			for(int i = x; i >= 1; i--) {
+		for(int x = input; x > 0; x--) {
+			for(int i = x; i > 0; i--) {
 				System.out.print("*");
 			}
 			System.out.println(); // 줄 바꿈 (개행)

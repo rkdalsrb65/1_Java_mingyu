@@ -13,8 +13,8 @@ public class LoopPracticeRun {
 //		lp.LoopPractice4();
 //		lp.LoopPractice5();
 //		lp.LoopPractice6();
-//		lp.LoopPractice7();
-//		lp.LoopPractice8();
+		lp.LoopPractice7();
+		lp.LoopPractice8();
 //		lp.LoopPractice9();
 //		lp.LoopPractice10();
 //		lp.LoopPractice11();
