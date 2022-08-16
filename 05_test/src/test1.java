@@ -346,66 +346,13 @@ int[] copyArr = new int[arr.length];
 클래스 외부에서 데이터의 직접적인 접근을 막고, 대신 간접적으로 데이터에 접근할 수 메소드를 클래스 내부에 작성하는 방법
 
 
+배열 / for문
 
 */	
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
-		
-
-
-
-		
-
-		
-//		메소드 명 : public void practice3(){}
-//		1부터 사용자에게 입력 받은 수까지의 정수들의 합을 for문을 이용하여 출력하세요.
-		
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("숫자를 입력하세요 : ");
-		int input = sc.nextInt();
-		
-		if (input >= 1) {
-			for (int i = input; i >= 1; i--) {
-				System.out.print(i + " ");
-			}
-		} else {
-			System.out.println("1 이상의 숫자를 입력해주세요.");
-		}		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 	}
