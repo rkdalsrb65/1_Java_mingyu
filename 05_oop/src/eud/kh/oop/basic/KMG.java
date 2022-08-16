@@ -18,7 +18,7 @@ public class KMG {
 	}
 	
 	public void plus(int num1, int num2) {
-		System.out.println("합 : " + (num1 = num2) );
+		System.out.println("합 : " + (num1 + num2) );
 	}
 	
 	
