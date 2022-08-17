@@ -181,26 +181,8 @@ public class ArrayExample2 {
 		
 		
 		
-		
-		
-		
-		
-		
-		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
