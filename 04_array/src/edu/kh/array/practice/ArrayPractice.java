@@ -277,11 +277,18 @@ public class ArrayPractice {
 		
 	Scanner sc = new Scanner(System.in);
 	
-	System.out.print("주민등록번호를 입력하세요 : ");
+	char[] arr;
+	arr = new char[14]
+	char[0] = 1;
+	
+	
+	
+	
+	
+	System.out.print("주민등록번호(-포함) : ");
 	String input = sc.next();
 	
-	
-	
+	System.out.println(input);
 	
 	
 	
@@ -413,6 +420,89 @@ public class ArrayPractice {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+/* 2022/08/17 시험
+package edu.kh.programing;
+
+import java.util.Scanner;
+
+public class Test1 {
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("가위 바위 보 게임을 시작합니다.");
+while(true) {
+System.out.print("가위 바위 보 중 한 개를 입력하세요 : ");
+String input = sc.next();
+int random = (int)(Math.random() * 3);
+String com = null;
+switch(random) {
+case 0 : com = "가위"; break;
+case 1 : com = "바위"; break;
+case 2 : com = "보"; break;
+}
+System.out.println("당신은 " + input +"를 냈습니다.");
+System.out.println("컴퓨터는 " + com +"를 냈습니다.");
+if(input.equals(com)) {
+System.out.println("비겼습니다. 다시 시작합니다.\n");
+}else {
+boolean win1 = input.equals("가위") && com.equals("보");
+boolean win2 = input.equals("바위") && com.equals("가위");
+boolean win3 = input.equals("보") && com.equals("바위");
+if(win1 || win2 || win3) {
+System.out.println("당신이 이겼습니다.");
+}else{
+System.out.println("당신이 졌습니다.");
+}
+break;
+}
+}
+}
+}
+
+1. 사용자로 부터 가위 바위 보 중 하나의 문자열을 입력 받고, 난수를 발생시켜 랜덤하게 가위 바위 보 를 지정한다.
+System.out.print("가위 바위 보 중 한 개를 입력하세요 : ");
+
+String input = sc.next();
+int random = (int)(Math.random() * 3);
+String com = null;
+switch(random) {
+case 0 : com = "가위"; break;
+case 1 : com = "바위"; break;
+case 2 : com = "보"; break;
+}
+System.out.println("당신은 " + input +"를 냈습니다.");
+System.out.println("컴퓨터는 " + com +"를 냈습니다.");
+
+2. 랜덤한 컴퓨터의 가위 바위 보 문자열과 입력한 문자열이 같으면 아래 실행 결과처럼 비겼다고 출력하고 가위 바위 보 게임을 반복한다.
+- input의 String, ran은 int 자료형으로 정상적인 비교를 할 수 없음.
+- 문자열 비교시 equals() 를 사용해야 함.
+- 전체 코드와 작성 답안이 일치하지 않습니다.
+if(input.equals(com)) {
+System.out.println("비겼습니다. 다시 시작합니다.\n");
+}
+3. 입력한 가위 바위 보 문자열이 컴퓨터의 랜덤한 가위 바위 보 문자열과 비교하여 가위 바위 보 게임의 룰 대로 이긴 경우 이겼다고 출력, 진 경우 졌다고 출력 후 종료 종료
+ input의 String, ran은 int 자료형으로 정상적인 비교를 할 수 없음.
+​- 문자열 비교시 equals() 를 사용해야 함.
+- 전체 코드와 작성 답안이 일치하지 않습니다
+else {
+boolean win1 = input.equals("가위") && com.equals("보");
+boolean win2 = input.equals("바위") && com.equals("가위");
+boolean win3 = input.equals("보") && com.equals("바위");
+if(win1 || win2 || win3) {
+System.out.println("당신이 이겼습니다.");
+}else{
+System.out.println("당신이 졌습니다.");
+}
+break;
+}                                                            */
 	
 	
 
