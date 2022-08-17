@@ -28,7 +28,6 @@ public class ArrayPractice {
 	}
 	
 	
-	
 	System.out.print("\n짝수 번째 인덱스 합 : " + sum);
 	
 	System.out.println();
