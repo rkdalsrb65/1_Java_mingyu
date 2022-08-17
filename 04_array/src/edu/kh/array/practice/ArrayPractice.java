@@ -290,7 +290,7 @@ public class ArrayPractice {
 	
 	
 	
-	
+	}
 	
 	
 /*	메소드 명 : public void practice8(){}
