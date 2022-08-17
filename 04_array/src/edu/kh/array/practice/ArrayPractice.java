@@ -277,12 +277,6 @@ public class ArrayPractice {
 		
 	Scanner sc = new Scanner(System.in);
 	
-	char[] arr;
-	arr = new char[14]
-	char[0] = 1;
-	
-	
-	
 	
 	
 	System.out.print("주민등록번호(-포함) : ");
@@ -292,9 +286,6 @@ public class ArrayPractice {
 	
 	
 	
-	
-	
-	}
 	
 	
 	
@@ -316,12 +307,25 @@ public class ArrayPractice {
 	정수 : 5
 	1, 2, 3, 2, 1             */
 	
+	
+	
+	
+	
+	
+	
+	
+	
 /*	메소드 명 : public void practice9(){}
 	10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
 	1~10 사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요.
 
 	[실행 화면]
 	발생한 난수 : 9 7 6 2 5 10 7 2 9 6             */
+	
+	
+	
+	
+	
 	
 /*	메소드 명 : public void practice10(){}
 	10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
@@ -333,6 +337,11 @@ public class ArrayPractice {
 	최대값 : 10
 	최소값 : 2	                         */
 	
+	
+	
+	
+	
+	
 /*	메소드 명 : public void practice11(){}
 	10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
 	1~10 사이의 난수를 발생시켜 중복된 값이 없게 배열에 초기화한 후 출력하세요.
@@ -340,12 +349,22 @@ public class ArrayPractice {
 	[실행 화면]
 	4 1 3 6 9 5 8 10 7 2	         */
 	
+	
+	
+	
+	
+	
 /*	메소드 명 : public void practice12(){}
 	로또 번호 자동 생성기 프로그램을 만들기.
 	(중복 값 없이 오름차순으로 정렬하여 출력하세요.)
 
 	[실행 화면]
 	3 4 15 17 28 40                   */
+	
+	
+	
+	
+	
 	
 /*	메소드 명 : public void practice13(){}
 	문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
@@ -355,6 +374,11 @@ public class ArrayPractice {
 	문자열 : application
 	문자열에 있는 문자 : a, p, l, i, c, t, o, n
 	문자 개수 : 8                           */
+	
+	
+	
+	
+	
 	
 /*	메소드 명 : public void practice14(){}
 	사용자가 입력한 배열의 길이만큼의 String 배열을 선언 및 할당하고
@@ -384,6 +408,11 @@ public class ArrayPractice {
 			더 값을 입력하시겠습니까?(Y/N) : n
 			[자바의 정석, 알고리즘, C프로그래밍, 인간관계, 자기계발, 영단어600] */
 	
+	
+	
+	
+	
+	
 /*	메소드 명 : public void practice15(){}
 	3행 3열짜리 문자열 배열을 선언 및 할당하고
 	인덱스 0행 0열부터 2행 2열까지 차례대로 접근하여 “(0, 0)”과 같은 형식으로 저장 후 출력하세요.
@@ -405,6 +434,10 @@ public class ArrayPractice {
 	5 6 7 8
 	9 10 11 12
 	13 14 15 16                  */
+	
+	
+	
+	
 	
 	
 /*	메소드 명 : public void practice17(){}

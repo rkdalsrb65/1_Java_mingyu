@@ -421,7 +421,6 @@ public class ArrayExample {
 		
 		copyArr = Arrays.copyOf(arr,arr.length);
 		
-
 		// 주소 확인 -> 다름
 		System.out.println("arr : " + arr);
 		System.out.println("copyArr : " + copyArr);
