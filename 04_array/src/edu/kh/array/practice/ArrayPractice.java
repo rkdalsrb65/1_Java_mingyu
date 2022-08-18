@@ -321,7 +321,26 @@ public class ArrayPractice {
 	[실행 화면]
 	발생한 난수 : 9 7 6 2 5 10 7 2 9 6             */
 	
-	
+	public void practice9() {
+		
+		int arr[] = new int[10];
+		int ran = (int)(Math.random() * 10);
+		
+		arr[0] = ran;
+		arr[1] = ran;
+		arr[2] = ran;
+		arr[3] = ran;
+		arr[4] = ran;
+		arr[5] = ran;
+		arr[6] = ran;
+		arr[7] = ran;
+		arr[8] = ran;
+		arr[9] = ran;
+		
+		System.out.print("발생한 난수 : " + ran + " ");
+		
+		
+	}
 	
 	
 	
@@ -336,7 +355,16 @@ public class ArrayPractice {
 	최대값 : 10
 	최소값 : 2	                         */
 	
-	
+	public void practice10() {
+		int arr[] = new int[10];
+		int ran = (int)(Math.random() * 10);
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
