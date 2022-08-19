@@ -22,7 +22,7 @@ public class UserView {
 	
 	// 메뉴 출력 기능(메서드)
 	public void displayMenu() {
-		
+	
 		int input = 0; // 메뉴 입력용 변수
 		
 		do {
