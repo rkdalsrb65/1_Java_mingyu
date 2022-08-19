@@ -16,22 +16,24 @@ public class ArrayPractice {
 	
 	public void practice1() {
 	
-	int sum = 0;
-	
-	int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
-	
-	for(int i = 1; i <= 9; i++) { // 1부터 9까지의 값 
-			System.out.print(i + " ");
-			if(i % 2 != 0) {
-			sum += i;
+		int sum = 0;
+		
+		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
+		
+		for(int i = 0; i < arr.length; i++) { // 1부터 9까지의 값 			
+				arr[i] = i + 1;
 		}
-	}
+		for(int i = 0; i < arr.length; i++) {
+			
+			System.out.printf("%d ", arr[i]);
+			if(i % 2 == 0) 
+				sum += i+1;
+		
+		}
+		System.out.print("\n짝수 번째 인덱스 합 : " + sum);
+}
 	
 	
-	System.out.print("\n짝수 번째 인덱스 합 : " + sum);
-	
-	System.out.println();
-	}
 	
 	
 /*	메소드 명 : public void practice2(){}
@@ -45,19 +47,22 @@ public class ArrayPractice {
 	
 	public void practice2() {
 		
-	int sum = 0;
-	
-	int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
-	
-	for(int i = 1; i <= 9; i++) { // 1부터 9까지의 값 
-			System.out.print(i + " ");
-			if(i % 2 == 0) {
-			sum += i;
+		int sum = 0;
+		
+		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
+		
+		for(int i = 9; 0 > arr.length; i--) { // 1부터 9까지의 값 			
+				arr[i] = i + 1;
 		}
-	}
-	System.out.print("\n홀수 번째 인덱스 합 : " + sum);
-	System.out.println();
-	}	
+		for(int i = 9; 0 > arr.length; i--) {
+			
+			System.out.printf("%d ", arr[i]);
+			if(i % 2 != 0) 
+				sum += i;
+		
+		}
+		System.out.print("\n홀수 번째 인덱스 합 : " + sum);
+}
 	
 	
 	
