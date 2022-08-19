@@ -45,8 +45,15 @@ public class UserService {
 		
 	}
 	
-	
-	
-	
 }
+	
+	// 회원 정보 수정 Service
+	public void updateUser(String name, int age, char gender, User loginUser) {
+		
+		loginUser.setUserName(name);
+		loginUser.setUserAge(age);
+		loginUser.setUserGender(gender);
+	
+	}
+	
 }
