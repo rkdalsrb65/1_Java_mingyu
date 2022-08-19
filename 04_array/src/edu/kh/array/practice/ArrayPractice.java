@@ -51,10 +51,10 @@ public class ArrayPractice {
 		
 		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
 		
-		for(int i = 10; 1 >= arr.length; i--) { // 1부터 9까지의 값 			
-				arr[i] = i-1;
+		for(int i = 9; 1 >= arr.length; i--) { // 1부터 9까지의 값 			
+				arr[i] = i+1;
 		}
-		for(int i = 10; 1 >= arr.length; i--) {
+		for(int i = 9; 1 >= arr.length; i--) {
 			
 			System.out.printf("%d ", arr[i]);
 			if(i % 2 != 0)
@@ -155,7 +155,7 @@ public class ArrayPractice {
 	
 	boolean flag = true;
 	
-	int[] arr = {5, 8, 9, 10, 4};
+	int[] arr = {input0,input1,input2,input3,input4};
 	
 	for(int i = 0; i < arr.length; i++) {
 		if(arr[i] == search) { // arr[i] 값이 입력 받은 값과 같다면
@@ -196,7 +196,7 @@ public class ArrayPractice {
 		System.out.print("문자 : ");
 		String search = sc.next();
 		boolean flag = true;
-		for(int i = 0; i <= 11; i++) {
+		for(int i = 0; i <= arr.length; i++) {
 			 // arr[i] 값이 입력 받은 값과 같다면
 				System.out.print("application에 i가 존재하는 위치(인덱스) : " + i + "\n");
 				sum += i;
