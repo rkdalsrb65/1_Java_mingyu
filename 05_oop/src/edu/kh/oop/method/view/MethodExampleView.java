@@ -2,11 +2,16 @@ package edu.kh.oop.method.view;
 
 import java.util.Scanner;
 
+import edu.kh.oop.method.model.service.MethodExampleService;
+
 // 콘솔에 보여지는 내용 출력, 입력 받는 용도의 클래스
 public class MethodExampleView {
 	private Scanner sc = new Scanner(System.in); //클래스 내 어디서든 사용 가능한 Scanner 객체 생성
 	// 캡슐화 원칙에 따라서 private
 	// 멤버 변수 (위)/(아래) 지역 변수 
+	
+	private MethodExampleService service = new MethodExampleService();
+	
 	
 	// void : 반환 값이 없음
 	public void displayMenu() {
@@ -29,10 +34,22 @@ public class MethodExampleView {
 			System.out.println(); // 줄 바꿈
 			
 			switch(input) {
-			case 1: ; break;
-			case 2: ; break;
-			case 3: ; break;
-			case 4: ; break;
+			
+			// 1이 입력 되었을 때 service가 참조하는 객체의 method1() 메서드 호출
+			case 1: service.method1(); break;
+			
+			case 2: menu2(); break; // 현재 객체가 가지고 있는 menu2() 메서드 호출 
+				//this.menu2(); break;
+			    //service.method2(2, 20, 30); break;
+			
+			case 3: String result = service.method3();
+			// method3() 호출 후 String 값을 반환 받음
+			// 그 값을 result 변수에 저장
+			
+			System.out.println(result); break;
+			
+			case 4: menu4(); break;
+			
 			case 0: System.out.println("프로그램 종료"); break;
 			default : System.out.println("잘못 입력하셨습니다");
 			}
@@ -48,6 +65,53 @@ public class MethodExampleView {
 		
 		
 	}
+	
+	
+	// 정수 3개를 입력 받고, service.method2()를 호출하는 메서드 작성
+	public void menu2() {
+		
+		System.out.print("입력 1 : ");
+		int input1 = sc.nextInt();
+		System.out.print("입력 2 : ");
+		int input2 = sc.nextInt();
+		System.out.print("입력 3 : ");
+		int input3 = sc.nextInt();
+		
+		service.method2(input1, input2, input3);
+		
+	}
+	
+	public void menu4() {
+		
+		System.out.print("정수 입력 1 : ");
+		int input1 = sc.nextInt();
+		
+		System.out.print("연산자 입력 : ");
+		String op = sc.next();
+		
+		System.out.print("정수 입력 2 : ");
+		int input2 = sc.nextInt();
+		
+		// 1 + 2 = 3
+		System.out.printf("%d %s %d = %.1f \n", input1 , op, input2, service.method4(input1, input2, op));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

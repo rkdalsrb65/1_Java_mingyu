@@ -14,10 +14,8 @@ public class MethodExampleRun {
 		
 		view.displayMenu(); // view가 참조하는 객체의 기능(메서드) 중 displayMenu() 메서드를 호출
 		
-		// MethodExampleService 객체 생성
-		MethodExampleService service = new MethodExampleService();
 		
-
+		
 	}
 
 }
