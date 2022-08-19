@@ -31,7 +31,6 @@ public class UserService {
 		// 회원가입을 안하고 로그인을 시도하는 경우
 		if(user == null) {
 			return -1;
-			System.out.println("");
 		} else {
 			
 			// id / pw 비교
@@ -49,4 +48,5 @@ public class UserService {
 	
 	
 	
+}
 }
