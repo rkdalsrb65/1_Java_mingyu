@@ -44,7 +44,7 @@ public class UserView {
 			
 			switch(input) {
 			case 1: signUp(); break;
-			case 2: ; break;
+			case 2: login(); break;
 			case 3: ; break;
 			case 4: ; break;
 			case 5: ; break;
@@ -53,7 +53,7 @@ public class UserView {
 			}
 			
 			
-			
+			 
 		}while(input != 0);
 		
 	}
