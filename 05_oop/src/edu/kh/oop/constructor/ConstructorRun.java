@@ -1,6 +1,7 @@
 package edu.kh.oop.constructor;
 
 import edu.kh.oop.constructor.model.vo.Member;
+import edu.kh.oop.field.model.vo.Temp;
 
 public class ConstructorRun {
 
@@ -24,7 +25,15 @@ public class ConstructorRun {
 		                         // -> 전달 인자, 인자(Argument)
 		
 		Member member6 = new Member("아이디", "비밀번호", "010-1-1", 1);
+		
 		Member member7 = new Member("아디", "비번", "010-2-2", 2);
+		
+		
+		
+		Temp t1 = new Temp();
+		
+		
+		
 		
 		
 		System.out.println("프로그램 종료");

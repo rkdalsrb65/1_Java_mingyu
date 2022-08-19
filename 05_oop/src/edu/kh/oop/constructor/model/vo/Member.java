@@ -121,8 +121,14 @@ public class Member {
 	
 	// 메서드(기능)
 	
-	
-	
+	//필드
+//	Academy a = new Academy();
+//	a.temp1~4 : 같은 클래스
+//	a.temp1~3 : 같은 패키지
+//	a.temp1   : 다른 패키지
+//	a.temp1~2 : 다른 패키지 + 상속관계
+//	접근제한자 생략시 (default)사용
+//	캐뷸화 원칙으로 private사용
 	
 	
 	
