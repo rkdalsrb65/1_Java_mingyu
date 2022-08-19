@@ -51,13 +51,13 @@ public class ArrayPractice {
 		
 		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
 		
-		for(int i = 9; 0 > arr.length; i--) { // 1부터 9까지의 값 			
-				arr[i] = i + 1;
+		for(int i = 10; 1 >= arr.length; i--) { // 1부터 9까지의 값 			
+				arr[i] = i-1;
 		}
-		for(int i = 9; 0 > arr.length; i--) {
+		for(int i = 10; 1 >= arr.length; i--) {
 			
 			System.out.printf("%d ", arr[i]);
-			if(i % 2 != 0) 
+			if(i % 2 != 0)
 				sum += i;
 		
 		}
