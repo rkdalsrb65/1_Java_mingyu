@@ -22,10 +22,8 @@ public class ArrayPractice {
 		
 		for(int i = 0; i < arr.length; i++) { // 1부터 9까지의 값 			
 				arr[i] = i + 1;
-		}
-		for(int i = 0; i < arr.length; i++) {
-			
 			System.out.printf("%d ", arr[i]);
+//			System.out.print(arr[i] + " ");
 			if(i % 2 == 0) 
 				sum += i+1;
 		
@@ -51,14 +49,14 @@ public class ArrayPractice {
 		
 		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
 		
-		for(int i = 9; 1 >= arr.length; i--) { // 1부터 9까지의 값 			
-				arr[i] = i+1;
-		}
-		for(int i = 9; 1 >= arr.length; i--) {
-			
+		for(int i = 0; i < arr.length; i++) { // 1부터 9까지의 값 			
+				arr[i] = arr.length - i;
 			System.out.printf("%d ", arr[i]);
+//			System.out.print(arr[i] + " ");
 			if(i % 2 != 0)
-				sum += i;
+//			if(i % 2 == 1)
+				sum += arr.length - i;
+//			    sum += arr[i];
 		
 		}
 		System.out.print("\n홀수 번째 인덱스 합 : " + sum);
@@ -85,12 +83,12 @@ public class ArrayPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("양의 정수: ");
-		int input = sc.nextInt();
+
+		int[] arr = new int[sc.nextInt()];
 		
-		int[] arr = new int[input];
-		
-		for(int i = 1; i <= input; i++) {
-			System.out.print(i + " ");
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] += i+1;
+			System.out.print(arr[i] + " ");
 		}
 		
 		System.out.println();
@@ -135,27 +133,17 @@ public class ArrayPractice {
 		
 	Scanner sc = new Scanner(System.in);
 	
-	System.out.print("입력 0 : ");
-	int input0 = sc.nextInt();
+	int[] arr = new int[5];
 	
-	System.out.print("입력 1 : ");
-	int input1 = sc.nextInt();
-	
-	System.out.print("입력 2 : ");
-	int input2 = sc.nextInt();
-	
-	System.out.print("입력 3 : ");
-	int input3 = sc.nextInt();
-	
-	System.out.print("입력 4 : ");
-	int input4 = sc.nextInt();
+	for(int i = 0; i < arr.length; i++) {
+		System.out.printf("입력 %d : ", i);
+		arr[i] = sc.nextInt();
+	}
 	
 	System.out.print("검색할 값 : ");
 	int search = sc.nextInt();
 	
 	boolean flag = true;
-	
-	int[] arr = {input0,input1,input2,input3,input4};
 	
 	for(int i = 0; i < arr.length; i++) {
 		if(arr[i] == search) { // arr[i] 값이 입력 받은 값과 같다면
@@ -184,32 +172,35 @@ public class ArrayPractice {
 	
 	public void practice5() {
 		
-		Scanner sc = new Scanner(System.in);
-		
-		char[] arr = {'a', 'p', 'p', 'l', 'i', 'c', 'a', 't', 'i', 'o', 'n'};
+		Scanner sc = new Scanner(System.in); // 사용자에게 문자열과 문자 입력받기
 		
 		System.out.print("문자열 : ");
-		System.out.println(arr);
+		String str = sc.nextLine(); // 문자열 입력 버퍼
 		
-		int sum = 0;
+		char[] arr = new char[str.length()]; // 사용자가 입력한 문자열 길이만큼의 char배열을 할당
 		
-		System.out.print("문자 : ");
-		String search = sc.next();
-		boolean flag = true;
-		for(int i = 0; i <= arr.length; i++) {
-			 // arr[i] 값이 입력 받은 값과 같다면
-				System.out.print("application에 i가 존재하는 위치(인덱스) : " + i + "\n");
-				sum += i;
-				flag = false; // flag 값을 변경
-				break;
-			} System.out.print(search+ " 개수 : " + sum);
-		
-			if(flag) {
-				System.out.println("존재하지 않습니다.");
+		for(int i = 0; i < arr.length; i++) { // for문을 이용한 초기화
+				arr[i] = str.charAt(i); // 배열안에 변수를 문자열로 대입
 			}
 		
+		System.out.print("문자 : ");
+		char ch = sc.nextLine().charAt(0); // 문자 입력 버퍼
 		
+		int count = 0; // 검색할 문자가 문자열에 몇개가 들어가 있는지 세어줄 변수 선언 및 초기화
 		
+		System.out.print(str + "에 " + ch + "가 존재하는 위치(인덱스) : "); // 문자열에 문자가 존재하는 위치(인덱스) 출력
+		
+		for(int i = 0; i < arr.length; i++) { // 배열의 길이만큼 반복
+			if(arr[i] == ch) { // 해당 인덱스 값이 검색될 문자와 같을 경우
+				System.out.print(i + " ");	// 해당 인덱스 이어서 출력
+
+				count++;	// count 1증가
+			}
+		}
+		// 위에서 print()를 사용했기 때문에 개행이 되어있지 않음
+		System.out.println();	// 줄바꿈
+		
+		System.out.println(ch + " 개수 : " + count); // 문자의 개수 출력
 	}
 	
 	
