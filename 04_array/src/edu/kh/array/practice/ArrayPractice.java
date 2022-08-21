@@ -16,19 +16,19 @@ public class ArrayPractice {
 	
 	public void practice1() {
 	
-		int sum = 0;
+		int sum = 0; // 합 변수 선언 및 초기화
 		
 		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
 		
-		for(int i = 0; i < arr.length; i++) { // 1부터 9까지의 값 			
-				arr[i] = i + 1;
-			System.out.printf("%d ", arr[i]);
+		for(int i = 0; i < arr.length; i++) { // for문을 이용한 초기화
+				arr[i] = i + 1; // 배열안에 인덱스에 i + 1 대입
+			System.out.printf("%d ", arr[i]); // 배열의 각 인덱스 요소에 대입한 것을 출력 (1 ~ 9)
 //			System.out.print(arr[i] + " ");
-			if(i % 2 == 0) 
-				sum += i+1;
-		
+			if(i % 2 == 0) // i를 2로 나눴을때 나머지가 0이면(짝수) 실행
+				sum += i+1; // 복합 대입 연산자를 사용해 짝수 번째 인덱스 합을 sum 변수에 누적 대입
+//		        sum += arr[i];
 		}
-		System.out.print("\n짝수 번째 인덱스 합 : " + sum);
+		System.out.print("\n짝수 번째 인덱스 합 : " + sum); // 짝수 번째 인덱스 합 출력
 }
 	
 	
@@ -45,21 +45,21 @@ public class ArrayPractice {
 	
 	public void practice2() {
 		
-		int sum = 0;
+		int sum = 0; // 합 변수 선언 및 초기화
 		
 		int[] arr = new int[9]; // 길이가 9인 배열을 선언 및 할당
 		
-		for(int i = 0; i < arr.length; i++) { // 1부터 9까지의 값 			
-				arr[i] = arr.length - i;
-			System.out.printf("%d ", arr[i]);
+		for(int i = 0; i < arr.length; i++) { // for문을 이용한 초기화			
+				arr[i] = arr.length - i; // 배열안에 인덱스에 arr.length(배열 길이(9)) - i 대입
+			System.out.printf("%d ", arr[i]); // 배열의 각 인덱스 요소에 대입한 것을 출력 (9 ~ 1)
 //			System.out.print(arr[i] + " ");
-			if(i % 2 != 0)
+			if(i % 2 != 0) // i를 2로 나눴을때 나머지가 0이 아니면(홀수) 실행
 //			if(i % 2 == 1)
-				sum += arr.length - i;
+				sum += arr.length - i; // 복합 대입 연산자를 사용해 홀수 번째 인덱스 합을 sum 변수에 누적 대입
 //			    sum += arr[i];
 		
 		}
-		System.out.print("\n홀수 번째 인덱스 합 : " + sum);
+		System.out.print("\n홀수 번째 인덱스 합 : " + sum); // 홀수 번째 인덱스 합 출력
 }
 	
 	
@@ -80,18 +80,18 @@ public class ArrayPractice {
 	
 	public void practice3() {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 구문 선언
 		
 		System.out.print("양의 정수: ");
 
-		int[] arr = new int[sc.nextInt()];
+		int[] arr = new int[sc.nextInt()]; // 배열의 길이(크기)를 사용자가 입력(지정)하는만큼 선언 및 할당
 		
-		for(int i = 0; i < arr.length; i++) {
-			arr[i] += i+1;
-			System.out.print(arr[i] + " ");
+		for(int i = 0; i < arr.length; i++) { // for문을 이용한 초기화
+			arr[i] += i+1; // 배열안에 인덱스에 i + 1 대입
+			System.out.print(arr[i] + " "); // 배열의 인덱스 값 출력
 		}
 		
-		System.out.println();
+		System.out.println(); // 줄 바꿈
 		
 	}
 	
@@ -131,29 +131,29 @@ public class ArrayPractice {
 	
 	public void practice4() {
 		
-	Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 구문 선언
 	
-	int[] arr = new int[5];
+	int[] arr = new int[5]; // 길이가 5인 배열을 선언 및 할당
 	
-	for(int i = 0; i < arr.length; i++) {
-		System.out.printf("입력 %d : ", i);
-		arr[i] = sc.nextInt();
+	for(int i = 0; i < arr.length; i++) { // for문을 이용한 초기화
+		System.out.printf("입력 %d : ", i); // 배열의 각 인덱스 요소에 대입한 것을 출력 (사용자가 입력한 값)
+		arr[i] = sc.nextInt(); // 배열의 각 인덱스에 사용자가 입력한 값을 대입
 	}
 	
 	System.out.print("검색할 값 : ");
-	int search = sc.nextInt();
+	int search = sc.nextInt(); // 검색할 값을 사용자가 입력
 	
-	boolean flag = true;
+	boolean flag = true; // 논리형 변수 boolean을 이용하여 flag 값(논리값) 선언 및 할당
 	
 	for(int i = 0; i < arr.length; i++) {
-		if(arr[i] == search) { // arr[i] 값이 입력 받은 값과 같다면
-			System.out.print("인덱스 : " + i);
+		if(arr[i] == search) { // arr[i] 값이 검색한 값과 같다면
+			System.out.print("인덱스 : " + i); // 몇번째 인덱스에 있는지 값 출력
 			flag = false; // flag 값을 변경
 			break; // 중복 데이터가 없으면 추가 검색을 하지 않아도 됨
 		}
 	}
 	
-	if(flag) {
+	if(flag) { // 만약 검색한 값이 인덱스에 존재하지 않는다면
 		System.out.println("일치하는 값이 존재하지 않습니다.");
 	}
 }
