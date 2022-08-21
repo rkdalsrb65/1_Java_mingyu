@@ -230,32 +230,24 @@ public class ArrayPractice {
 	총 합 : 2                     */	
 	
 	public void practice6() {
-		
-        int[] arr; // 배열 시작 주소를 저장하는 변수 (참조형, 4byte)
-        arr = new int[5];
-		arr[0] = 4;
-		arr[1] = -4;
-		arr[2] = 3;
-		arr[3] = -3;
-		arr[4] = 2;
-		
-		Scanner sc = new Scanner(System.in);
+						
+		Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 		
 		System.out.print("정수 : ");
 		int input = sc.nextInt();
 		
-		int sum = 0;
+		int[] arr = new int[input]; // 배열의 길이를 사용자에게 입력 받기
 		
-		System.out.print("배열 0번째 인덱스에 넣을 값 : " + arr[0]+"\n");
-		System.out.print("배열 1번째 인덱스에 넣을 값 : " + arr[1]+"\n");
-		System.out.print("배열 2번째 인덱스에 넣을 값 : " + arr[2]+"\n");
-		System.out.print("배열 3번째 인덱스에 넣을 값 : " + arr[3]+"\n");
-		System.out.print("배열 4번째 인덱스에 넣을 값 : " + arr[4]+"\n");
+		int sum = 0; // 합을 누적시킬 변수 선언 및 초기화
 		
-		sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4];
+		for(int i = 0; i < arr.length; i++) {
+			System.out.printf("배열 %d번째 인덱스에 넣을 값 : ", i);
+			arr[i] = sc.nextInt(); // 배열의 각 인덱스에 사용자가 값을 입력
+			sum += arr[i]; // 복합 대입 연산자를 사용해 사용자가 입력한 각 인덱스의 값을 sum 변수에 누적 대입
+		}
+		System.out.print("총 합 : " + sum+"\n"); // 각 인덱스에 넣어진 값을 누적시킨 총 합 출력
+	
 		
-		System.out.print(arr[0]+" "+ arr[1]+" "+arr[2]+" "+arr[3]+" "+arr[4]+"\n");
-		System.out.print("총 합 : " + sum+"\n");
 	}
 
 	
@@ -319,21 +311,14 @@ public class ArrayPractice {
 	
 	public void practice9() {
 		
-		int arr[] = new int[10];
-		int ran = (int)(Math.random() * 10);
-		
-		arr[0] = ran;
-		arr[1] = ran;
-		arr[2] = ran;
-		arr[3] = ran;
-		arr[4] = ran;
-		arr[5] = ran;
-		arr[6] = ran;
-		arr[7] = ran;
-		arr[8] = ran;
-		arr[9] = ran;
-		
-		System.out.print("발생한 난수 : " + ran + " ");
+		int arr[] = new int[10]; // 배열의 길이 10 선언 및 할당
+		int ran = (int)(Math.random() * 10 + 1); // 1~10 사이의 난수 생성
+
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = ran;
+			
+			System.out.print("발생한 난수 : " + ran);
+		}
 		
 		
 	}
@@ -352,9 +337,10 @@ public class ArrayPractice {
 	최소값 : 2	                         */
 	
 	public void practice10() {
-		int arr[] = new int[10];
-		int ran = (int)(Math.random() * 10);
 		
+		int arr[] = new int[10];
+		
+		int ran = (int)(Math.random() * 10 + 1);
 		
 		
 		
