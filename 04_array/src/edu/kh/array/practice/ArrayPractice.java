@@ -246,7 +246,7 @@ public class ArrayPractice {
 			sum += arr[i]; // 복합 대입 연산자를 사용해 사용자가 입력한 각 인덱스의 값을 sum 변수에 누적 대입
 		}
 		System.out.print("총 합 : " + sum+"\n"); // 각 인덱스에 넣어진 값을 누적시킨 총 합 출력
-	
+		
 		
 	}
 
