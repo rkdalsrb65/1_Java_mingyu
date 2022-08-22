@@ -42,7 +42,7 @@ public class StudentManagementView {
 			case 2: printAll(); break;
 			case 3: selectIndex(); break;
 			case 4: break;
-			case 5: break;
+			case 5: updateStudent(); break;
 			case 0: System.out.println("프로그램을 종료합니다."); break;
 			default : System.out.println("잘못 입력 하셨습니다.");
 			}
@@ -131,7 +131,41 @@ public class StudentManagementView {
 		
 	}
 	
+	/**
+	 * 학생 정보(점수) 수정 메서드
+	 */
+	public void updateStudent() {
+		System.out.println("[학생 정보 수정(인덱스)]");
+		
+		System.out.print("인덱스 : ");
+		int idx = sc.nextInt();
+		System.out.print("국어 점수 : ");
+		int kor = sc.nextInt();
+		System.out.print("영어 점수 : ");
+		int eng = sc.nextInt();
+		System.out.print("수학 점수 : ");
+		int math = sc.nextInt();
+		
+		// 학생 정보 수정 서비스 메서드 호출 후 결과 반환 받기
+		int result = service.updateStudent(idx, kor, eng, math);
+		
 	
+		
+		
+		if(result == -1) {
+			System.out.println("입력한 값이 인덱스 범위를 초과했습니다.");
+		} else if(result == 0) {
+			System.out.println("해당 인덱스에 학생 정보가 존재하지 않습니다.");
+		} else {
+			System.out.println("수정되었습니다.");
+		}
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
