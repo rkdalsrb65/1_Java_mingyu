@@ -22,7 +22,7 @@ public class StudentManagementService {
 	 * @param classRoom
 	 * @param number
 	 * @param name
-	 * @return 0 또는 1
+	 * @return 0(null 인덱스 없음) 또는 1(null인 인덱스 있어서 학생 객체의 주소를 추가함)
 	 */
 	public int addStudent(int grade, int classRoom, int number, String name) {
 		
@@ -56,6 +56,39 @@ public class StudentManagementService {
 		
 	}
 	
+	// stdArr의 getter
+	public Student[] getStdArr() {
+		return stdArr;
+	}
+	
+	/** 학생 1명 정보 조회(인덱스) 서비스 메서드
+	 * @param idx(검색할 인덱스 번호)
+	 * @return idx 값에 따른 결과 문자열
+	 */
+	public String selectIndex(int idx) {
+		
+		// stdArr의 인덱스 범위 : 0 ~ 4
+		if(idx < 0 || idx >= stdArr.length) { // 범위 초과 시
+			return "입력된 값이 인덱스 범위를 초과했습니다.";
+			
+		} else {
+			if(stdArr[idx] == null) { // null을 참조하는 인덱스인 경우
+				return "해당 인덱스에 학생 정보가 존재하지 않습니다.";
+				
+			} else { // 범위 초과 X, null X -> 학생 정보 존재
+				String str = "이름 : " + stdArr[idx].getName();
+				str += "\n학년 : " + stdArr[idx].getGrade();
+				str += "\n반  : " + stdArr[idx].getClassRoom();
+				str += "\n번호 : " + stdArr[idx].getNumber();
+				str += "\n국어 : " + stdArr[idx].getKor() + "점";
+				str += "\n영어 : " + stdArr[idx].getEng() + "점";
+				str += "\n수학 : " + stdArr[idx].getMath() + "점";
+				
+				return str;
+				
+			}
+		}
+	}
 	
 	
 }
