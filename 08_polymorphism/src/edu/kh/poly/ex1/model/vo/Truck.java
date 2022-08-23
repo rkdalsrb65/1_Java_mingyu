@@ -30,7 +30,9 @@ public class Truck  extends Car {
 	}
 	
 	
-	
+	public void loading() {
+		System.out.println("물건을 실을 수 있다.");
+	}
 	
 	
 	
