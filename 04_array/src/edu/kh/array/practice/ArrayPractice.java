@@ -424,7 +424,8 @@ public class ArrayPractice {
 	4 1 3 6 9 5 8 10 7 2	         */
 	
 	
-	public void practice11(){ 
+	public void practice11() {
+		
         // 1. 10개의 값을 저장할 수 있는 정수형 배열 선언 및 할당
         int[] arr = new int[10]; // 배열의 길이 10 선언 및 할당
 
@@ -456,7 +457,8 @@ public class ArrayPractice {
 	[실행 화면]
 	3 4 15 17 28 40                   */
 	
-	 public void practice12(){
+	 public void practice12() {
+		 
 	        // 1. 크기가 6인 정수형 배열 선언 및 할당
 	        int[] lotto = new int[6]; // // 로또 배열의 길이 6 선언 및 할당
 
@@ -484,7 +486,8 @@ public class ArrayPractice {
 	문자열에 있는 문자 : a, p, l, i, c, t, o, n
 	문자 개수 : 8                           */
 	
-	        public void practice13(){
+	        public void practice13() {
+	        	
 	            // 1. 사용자에게 문자열 입력받기
 	            Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 
@@ -561,7 +564,7 @@ public class ArrayPractice {
 			더 값을 입력하시겠습니까?(Y/N) : n
 			[자바의 정석, 알고리즘, C프로그래밍, 인간관계, 자기계발, 영단어600] */
 	
-	        public void practice14(){
+	        public void practice14() {
 
 	            // 1. 첫 배열 크기 지정
 	            Scanner sc= new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
@@ -627,20 +630,21 @@ public class ArrayPractice {
 	(1, 0)(1, 1)(1, 2)
 	(2, 0)(2, 1)(2, 2)	                */
 	
-	        public void practice15(){
-	            String[][] arr = new String[3][3]; // 배열의 길이(크기)를 [3][3] 선언 및 할당
+	        public void practice15() {
+	        	
+	            String[][] arr = new String[3][3]; // 문자열 2차원 배열의 길이(크기)를 행[3]열[3] 선언 및 할당
 
-	            for(int i=0; i<arr.length; i++) {
-	                for(int j=0; j<arr[i].length; j++) {
-	                    arr[i][j] = "(" + i + ", " + j + ")";
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
+	                for(int j=0; j<arr[i].length; j++) { // 2차원 배열의 행과 열이 0부터 2까지 반복
+	                    arr[i][j] = "(" + i + ", " + j + ")"; // 2차원 배열의 행과 열
 	                }
 	            }
 
 	            for(int i=0; i<arr.length; i++) {
 	                for(int j=0; j<arr[i].length; j++) {
-	                    System.out.print(arr[i][j]);
+	                    System.out.print(arr[i][j]); // 2차원의 배열의 행과 열 인덱스 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 	        }
 	
@@ -655,20 +659,21 @@ public class ArrayPractice {
 	9 10 11 12
 	13 14 15 16                  */
 	
-	        public void practice16(){
-	            int[][] arr = new int[4][4];
+	        public void practice16() {
+	        	
+	            int[][] arr = new int[4][4]; // 정수형 2차원 배열의 길이를 행[4]열[4]로 선언 및 할당
 
-	            int value = 1;
+	            int value = 1; // 첫번째 값은 1로 지정
 
-	            for(int i=0; i<arr.length; i++) {
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 	                for(int j=0; j<arr[i].length; j++) {
-	                    arr[i][j] = value++;
+	                    arr[i][j] = value++; // 2차원 배열의 행과열이 인덱스 크기까지 1부터 증가한다
 	                }
 	            }
 
 	            for(int i=0; i<arr.length; i++) {
 	                for(int j=0; j<arr[i].length; j++) {
-	                    System.out.printf("%2d ", arr[i][j]);
+	                    System.out.printf("%2d ", arr[i][j]); // 2차원 배열의 행과열이 2자리수로 나오게 출력
 	                }
 	                System.out.println();
 	            }
@@ -688,22 +693,23 @@ public class ArrayPractice {
 	8 7 6 5
 	4 3 2 1	              */
 	
-	        public void practice17(){
-	            int[][] arr = new int[4][4];
+	        public void practice17() {
+	        	
+	            int[][] arr = new int[4][4]; // 정수형 2차원 배열의 길이를 행[4]열[4]로 선언 및 할당
 
-	            int value = 16;
+	            int value = 16; // 첫번째 값은 16으로 지정
 
-	            for(int i=0; i<arr.length; i++) {
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 	                for(int j=0; j<arr[i].length; j++) {
-	                    arr[i][j] = value--;
+	                    arr[i][j] = value--; // 2차원 배열의 행과열이 인덱스 크기까지 16부터 감소한다
 	                }
 	            }
 
 	            for(int i=0; i<arr.length; i++) {
 	                for(int j=0; j<arr[i].length; j++) {
-	                    System.out.printf("%2d ", arr[i][j]);
+	                    System.out.printf("%2d ", arr[i][j]); // 2차원 배열의 행과열이 2자리수로 나오게 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 	        }
 	        
@@ -715,13 +721,14 @@ public class ArrayPractice {
 	3 6 9 18
 	6 10 10 26
 	18 19 26 63            */
-	        public void practice18(){
-	            int[][] arr = new int[4][4];
+	        public void practice18() {
+	        	
+	            int[][] arr = new int[4][4]; // 정수형 2차원 배열의 길이를 행[4]열[4]로 선언 및 할당
 
 	            int rowLastIndex = arr.length-1; // 행의 마지막 인덱스
 	            int colLastIndex = arr[0].length-1; // 열의 마지막 인덱스
 
-	            for(int i=0; i<rowLastIndex; i++) {
+	            for(int i=0; i<rowLastIndex; i++) { // for문을 이용한 초기화
 	                for(int j=0; j<colLastIndex; j++) {
 	                    // 1 ~ 10 사이 난수를 발생시켜 2차원 배열에 대입.
 	                    arr[i][j] = (int)(Math.random() * 10 + 1);
@@ -766,8 +773,9 @@ public class ArrayPractice {
 	        H B I X
 	        G F X I
 	         */
-	        public void practice19(){
-	            Scanner sc = new Scanner(System.in);
+	        public void practice19() {
+	        	
+	            Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위한 Scanner 구문
 
 	            while(true) {
 	                System.out.print("행 크기 : ");
@@ -775,25 +783,26 @@ public class ArrayPractice {
 	                System.out.print("열 크기 : ");
 	                int col = sc.nextInt();
 
-	                if((row < 1 || row >10) || (col < 1 || col >10)) {
-	                    System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+	                if((row < 1 || row >10) || (col < 1 || col >10)) { // 만약 행이 1보다 작거나 10보다 크거나 열이 1보다 작거나 10보다 크면
+	                    System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다."); // 출력한다.
 
-	                }else{
-	                    char[][] arr = new char[row][col];
+	                }else{ // 아니라면
+	                    char[][] arr = new char[row][col]; // 사용자가 2차원 배열의 행과 열의 크기를 지정(1~10 사이의 정수만)
 
-	                    for(int i=0; i<arr.length; i++) {
+	                    for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 	                        for(int j=0; j<arr[i].length; j++) {
-	                            arr[i][j] = (char)((int)(Math.random() * 26 + 65));
+	                            arr[i][j] = (char)((int)(Math.random() * 26 + 65)); // 배열의 행과 열을 문자형(알파벳) 난수 함수 생성
+	                            //                      (알파벳26글자/65는A, 66은B...)
 	                        }
 	                    }
 
 	                    for(int i=0; i<arr.length; i++) {
 	                        for(int j=0; j<arr[i].length; j++) {
-	                            System.out.print(arr[i][j] + " ");
+	                            System.out.print(arr[i][j] + " "); // 2차원 배열의 행과열 출력
 	                        }
-	                        System.out.println();
+	                        System.out.println(); // 줄바꿈 (개행)
 	                    }
-	                    break;
+	                    break; // 반복을 멈춤
 	                }
 	            }
 	        }
@@ -811,37 +820,37 @@ public class ArrayPractice {
 	        a b
 	        c d e f g h
 	        i j k
-	        l m n o p
-	         */
-	        public void practice20(){
-	            Scanner sc = new Scanner(System.in);
+	        l m n o p       */
+	        public void practice20() {
+	        	
+	            Scanner sc = new Scanner(System.in); // 사용자가 입력하기위한 Scanner 구문 사용
 
 	            System.out.print("행의 크기 : ");
 	            int row = sc.nextInt();
 
-	            char[][] arr = new char[row][];
+	            char[][] arr = new char[row][]; // 2차원 배열의 행을 사용자에게 입력 받음
 
-	            for(int i=0; i<arr.length; i++) {
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 	                System.out.print(i + "행의 크기 : ");
 	                int col = sc.nextInt();
 
-	                arr[i] = new char[col];
+	                arr[i] = new char[col]; // 가변 배열을 문자형으로 선언 및 할당
 	            }
 
 	            // 값 초기화
-	            char value = 'a';
-	            for(int i=0; i<arr.length; i++) {
+	            char value = 'a'; // 첫번째 문자의 시작을 a로 지정
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 	                for(int j=0; j<arr[i].length; j++) {
-	                    arr[i][j] = value++;
+	                    arr[i][j] = value++; // 2차원 배열의 행과열은 문자 a부터 증가한다
 	                }
 	            }
 
 	            // 출력
 	            for(int i=0; i<arr.length; i++) {
 	                for(int j=0; j<arr[i].length; j++) {
-	                    System.out.print(arr[i][j] + " ");
+	                    System.out.print(arr[i][j] + " "); // 2차원 배열의 행과열을 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 	        }
 
@@ -860,40 +869,42 @@ public class ArrayPractice {
 	        진재주 차천축
 	        피풍표 홍하하
 	         */
-	        public void practice21(){
+	        public void practice21() {
+	        	
 	            String[] students = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
-
-	            String[][] arr1 = new String[3][2];
-	            String[][] arr2 = new String[3][2];
+	            // 1차원 문자열 배열 선언과 동시에 초기화 (학생 12명)
+	            
+	            String[][] arr1 = new String[3][2]; // 2차원 배열 3행2열로 초기화 (1분단)
+	            String[][] arr2 = new String[3][2]; // 2차원 배열 3행2열로 초기화 (2분단)
 
 	            int index = 0; // students 배열에서 0 부터 1씩 증가하며 학생들을 선택하는 용도의 변수
 
 	            System.out.println("== 1분단 ==");
-	            for(int row=0 ; row<arr1.length ; row++) {
+	            for(int row=0 ; row<arr1.length ; row++) { // for문을 이용한 초기화
 	                for(int col=0 ; col<arr1[row].length ; col++) {
 
 	                    arr1[row][col] = students[index];
 	                    // students배열 index 번째 학생을 arr1[row][col]에 대입
 
-	                    index++;
+	                    index++; // 1분단 학생들을 선택하는 용도의 변수 1씩 증가한다
 
-	                    System.out.print(arr1[row][col] + " ");
+	                    System.out.print(arr1[row][col] + " "); // 1분단 행과열(학생) 출력
 	                }
-	                System.out.println();// 줄바꿈
+	                System.out.println(); // 줄바꿈
 	            }
 
 	            System.out.println("== 2분단 ==");
-	            for(int row=0 ; row<arr2.length ; row++) {
+	            for(int row=0 ; row<arr2.length ; row++) { // for문을 이용한 초기화
 	                for(int col=0 ; col<arr2[row].length ; col++) {
 
 	                    arr2[row][col] = students[index];
 	                    // students배열 index 번째 학생을 arr2[row][col]에 대입
 
-	                    index++;
+	                    index++; // 2분단 학생들을 선택하는 용도의 변수 1씩 증가한다
 
-	                    System.out.print(arr2[row][col] + " ");
+	                    System.out.print(arr2[row][col] + " "); // 2분단 행과열(학생) 출력
 	                }
-	                System.out.println();// 줄바꿈
+	                System.out.println(); // 줄바꿈
 	            }
 	        }
 
@@ -913,12 +924,13 @@ public class ArrayPractice {
 	        검색할 학생 이름을 입력하세요 : 차천축
 	        검색하신 차천축 학생은 2분단 2번째 줄 오른쪽에 있습니다.
 	         */
-	        public void practice22(){
+	        public void practice22() {
+	        	
 	            Scanner sc = new Scanner(System.in);
 	            String[] students = { "강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하" };
-
-	            String[][] seat1 = new String[3][2];
-	            String[][] seat2 = new String[3][2];
+	            // 1차원 문자열 배열 선언과 동시에 초기화 (학생 12명)
+	            String[][] seat1 = new String[3][2]; // 2차원 배열 3행2열로 초기화 (1분단)
+	            String[][] seat2 = new String[3][2]; // 2차원 배열 3행2열로 초기화 (2분단)
 
 	            int index = 0;
 	            // 1분단이 끝나고 2분단이 시작될 때도 이어서 들어가야하기 때문에
@@ -926,53 +938,51 @@ public class ArrayPractice {
 
 	            // 1분단 학생 대입
 	            System.out.println("== 1분단 ==");
-	            for (int i = 0; i < seat1.length; i++) {
+	            for (int i = 0; i < seat1.length; i++) { // for문을 이용한 초기화
 
 	                for (int j = 0; j < seat1[i].length; j++) {
 
-	                    seat1[i][j] = students[index++];
-	                    System.out.print(seat1[i][j] + " ");
+	                    seat1[i][j] = students[index++]; // 1분단의 행과열(학생)은 학생을 이어서 셀 수 있도록 만든 index 변수에서 1씩 증가함
+	                    System.out.print(seat1[i][j] + " "); // 1분단의 행과열(학생) 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 
 	            // 2분단 학생 대입
 	            System.out.println("== 2분단 ==");
-	            for (int i = 0; i < seat2.length; i++) {
+	            for (int i = 0; i < seat2.length; i++) { // for문을 이용한 초기화
 
 	                for (int j = 0; j < seat2[i].length; j++) {
 
-	                    seat2[i][j] = students[index++];
-	                    System.out.print(seat2[i][j] + " ");
+	                    seat2[i][j] = students[index++]; // 2분단의 행과열(학생)은 학생을 이어서 셀 수 있도록 만든 index 변수에서 1씩 증가함
+	                    System.out.print(seat2[i][j] + " "); // 2분단의 행과열(학생) 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 
 	            System.out.println("============================");
 
 	            System.out.print("검색할 학생 이름을 입력하세요 : ");
-	            String searchName = sc.next();
+	            String searchName = sc.next(); // 사용자가 학생을 검색하기위한 문자형 입력 버퍼
 
 
 	            // 검색된 분단, 줄, 좌우 방향을 지정할 변수 선언
-	            int seat = 0;
-	            int row = 0;
-	            String direction = null;
+	            int seat = 0; // 분단
+	            int row = 0; // 행(n번째 줄)
+	            String direction = null; // 오른쪽
 
-	            for(int i=0; i<seat1.length ; i++) {
+	            for(int i=0; i<seat1.length ; i++) { // for문을 이용한 초기화
 
 	                for(int j=0; j<seat1[i].length ; j++) {
 
-	                    if(seat1[i][j].equals(searchName)) {
-	                        // 1분단에 일치하는 이름이 있을 경우
-	                        seat = 1;
-	                        row = i+1;
+	                    if(seat1[i][j].equals(searchName)) { // 1분단에 일치하는 이름이 있을 경우
+	                        seat = 1; // 1분단
+	                        row = i+1; // 행+1 (인덱스는 0부터 시작하기 때문에 1을 더해줌)
 	                        direction = j == 0 ? "왼쪽" : "오른쪽"; // 삼항 연산자
 
-	                    }else if(seat2[i][j].equals(searchName)) {
-	                        // 2분단에 일치하는 이름이 있을 경우
-	                        seat = 2;
-	                        row = i+1;
+	                    } else if(seat2[i][j].equals(searchName)) { // 2분단에 일치하는 이름이 있을 경우
+	                        seat = 2; // 2분단
+	                        row = i+1; // 행+1 (인덱스는 0부터 시작하기 때문에 1을 더해줌)
 	                        direction = j == 0 ? "왼쪽" : "오른쪽"; // 삼항 연산자
 	                    }
 	                }
@@ -982,7 +992,7 @@ public class ArrayPractice {
 	            if(seat != 0) { // 검색 결과가 있을 경우
 	                System.out.printf("검색하신 %s 학생은 %d분단 %d번째 줄 %s에 있습니다.\n",
 	                        searchName, seat, row, direction);
-	            }else {
+	            } else { // 검색한 결과에 없다면
 	                System.out.println("검색한 학생이 존재하지 않습니다.");
 	            }
 	        }
@@ -998,47 +1008,48 @@ public class ArrayPractice {
 	        1
 	        2
 	        3
-	        4 X
-	         */
-	        public void practice23(){
+	        4 X                  */
+	        public void practice23() {
+	        	
 	            Scanner sc = new Scanner(System.in);
+	            
 	            String[][] board = new String[6][6]; // String 6행 6열 2차원 배열 생성
 
 	            // 행과 열의 인덱스를 표시하는 부분에 인덱스 대입
-	            for (int i = 0; i < board.length-1; i++) {
-	                board[0][i+1] = i + "";
-	                board[i+1][0] = i + "";
+	            for (int i = 0; i < board.length-1; i++) { // for문을 이용한 초기화
+	                board[0][i+1] = i + ""; // 열이 1씩 증가함
+	                board[i+1][0] = i + ""; // 행이 1씩 증가함
 
 	                // '0' == 60번
 	            }
 
 
-	            int rowIndex = 0;
-	            int colIndex = 0;
+	            int rowIndex = 0; // 행의 인덱스 초기화
+	            int colIndex = 0; // 열의 인덱스 초기화
 
 	            while(true) {
 	                System.out.print("행 인덱스 입력 : ");
-	                rowIndex = sc.nextInt();
+	                rowIndex = sc.nextInt(); // 행의 인덱스를 사용자가 입력한다.
 
-	                if(rowIndex < 0 || rowIndex > 4) {
-	                    System.out.println("0~4사이 인덱스를 입력해주세요.");
-	                    continue;
+	                if(rowIndex < 0 || rowIndex > 4) { // 행의 인덱스가 0보다 작거나 4보다 크다면
+	                    System.out.println("0~4사이 인덱스를 입력해주세요."); // 사용자가 0~4사이 인덱스를 지정한다.
+	                    continue; // 반복문 실행 시 continue 아래 부분은 실행하지 않고 반복문 다시 실행
 	                }
 
-	                break;
+	                break; // 반복 종료
 	            }
 
 
 	            while(true) {
 	                System.out.print("열 인덱스 입력 : ");
-	                colIndex = sc.nextInt();
+	                colIndex = sc.nextInt(); // 열의 인덱스를 사용자가 입력한다.
 
-	                if(colIndex < 0 || colIndex > 4) {
-	                    System.out.println("0~4사이 인덱스를 입력해주세요.");
-	                    continue;
+	                if(colIndex < 0 || colIndex > 4) { // 열의 인덱스가 0보다 작거나 4보다 크다면
+	                    System.out.println("0~4사이 인덱스를 입력해주세요."); // 사용자가 0~4사이 인덱스를 지정한다.
+	                    continue; // 반복문 실행 시 continue 아래 부분은 실행하지 않고 반복문 다시 실행
 	                }
 
-	                break;
+	                break; // 반복 종료
 	            }
 
 
@@ -1050,67 +1061,69 @@ public class ArrayPractice {
 	                        // 실제 2차원 배열의 인덱스에 1을 추가한 값이 화면에 표시된 인덱스
 	                    }
 
-	                    if(board[i][j] == null){
-	                        board[i][j] = " ";
+	                    if(board[i][j] == null){ // 행과 열의 인덱스 값에 숫자가 없다면
+	                        board[i][j] = " "; // 공백으로 둔다.
 	                    }
 
-	                    System.out.print(board[i][j] + " ");
+	                    System.out.print(board[i][j] + " "); // 행과열 출력
 	                }
-	                System.out.println();
+	                System.out.println(); // 줄 바꿈 (개행)
 	            }
 	        }
 
 	        /* 실습문제 24
-	        실습문제9와 내용은 같으나 행 입력 시 99가 입력되지 않으면 무한 반복이 되도록 구현하세요.
-	         */
+	        실습문제23과 내용은 같으나 행 입력 시 99가 입력되지 않으면 무한 반복이 되도록 구현하세요. */
+	        
 	        public void practice24() {
+	        	
 	            Scanner sc = new Scanner(System.in);
+	            
 	            String[][] board = new String[6][6]; // String 6행 6열 2차원 배열 생성
 
 	            // 행과 열의 인덱스를 표시하는 부분에 인덱스 대입
-	            for (int i = 0; i < board.length-1; i++) {
-	                board[0][i+1] = i + "";
-	                board[i+1][0] = i + "";
+	            for (int i = 0; i < board.length-1; i++) { // for문을 이용한 초기화
+	                board[0][i+1] = i + ""; // 열이 1씩 증가함
+	                board[i+1][0] = i + ""; // 행이 1씩 증가함
 
 	                // '0' == 60번
 	            }
 
 
-	            int rowIndex = 0;
-	            int colIndex = 0;
+	            int rowIndex = 0; // 행의 인덱스 초기화
+	            int colIndex = 0; // 열의 인덱스 초기화
 
 	            while(true) {
 	                while (true) {
 	                    System.out.print("행 인덱스 입력 : ");
-	                    rowIndex = sc.nextInt();
+	                    rowIndex = sc.nextInt(); // 사용자가 행의 인덱스를 입력 
 
-	                    if(rowIndex == 99){
-	                        break;
+	                    if(rowIndex == 99){ // 만약 행의 인덱스가 99라면
+	                        break; // 반복 종료
 	                    }
 
-	                    if (rowIndex < 0 || rowIndex > 4) {
-	                        System.out.println("0~4사이 인덱스를 입력해주세요.");
-	                        continue;
+	                    if (rowIndex < 0 || rowIndex > 4) { // 행의 인덱스가 0보다 작거나 4보다 크다면
+	                        System.out.println("0~4사이 인덱스를 입력해주세요."); // 사용자가 0~4 입력
+	                        continue; // 반복문 실행 시 continue 아래 부분은 실행하지 않고 반복문 다시 실행
 	                    }
 
-	                    break;
+	                    break; // 반복 종료
 	                }
 
-	                if(rowIndex == 99) {
-	                    System.out.println("프로그램 종료");
-	                    break;
+	                if(rowIndex == 99) { // 행의 인덱스가 99라면
+	                    System.out.println("프로그램 종료"); //
+	                    break; // 반복 종료
 	                }
 
 	                while (true) {
 	                    System.out.print("열 인덱스 입력 : ");
-	                    colIndex = sc.nextInt();
+	                    colIndex = sc.nextInt(); // 사용자가 열의 인덱스 입력
 
-	                    if (colIndex < 0 || colIndex > 4) {
+	                    if (colIndex < 0 || colIndex > 4) { // 열의 인덱스가 0보다 작거나 4보다 크다면
 	                        System.out.println("0~4사이 인덱스를 입력해주세요.");
-	                        continue;
+	                        continue; // 반복문 실행 시 continue 아래 부분은 실행하지 않고 반복문 다시 실행
 	                    }
 
-	                    break;
+	                    break; // 반복 종료
 	                }
 
 
@@ -1122,13 +1135,13 @@ public class ArrayPractice {
 	                            // 실제 2차원 배열의 인덱스에 1을 추가한 값이 화면에 표시된 인덱스
 	                        }
 
-	                        if (board[i][j] == null) {
-	                            board[i][j] = " ";
+	                        if (board[i][j] == null) { // 행과 열의 인덱스 값에 숫자가 없다면
+	                            board[i][j] = " "; // 공백으로 둔다.
 	                        }
 
-	                        System.out.print(board[i][j] + " ");
+	                        System.out.print(board[i][j] + " "); // 행과 열 출력
 	                    }
-	                    System.out.println();
+	                    System.out.println(); // 줄 바꿈 (개행)
 	                }
 
 	            }
