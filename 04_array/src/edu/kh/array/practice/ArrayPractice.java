@@ -267,21 +267,21 @@ public class ArrayPractice {
 	
 	public void practice7() {
 		
-	Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 	
 	System.out.print("주민등록번호(-포함) : ");
 	String input = sc.next();
 	
-	 char[] arr = new char[input.length()];
+	 char[] arr = new char[input.length()]; // 사용자가 입력한 문자열 길이만큼의 char배열을 할당
 
-     for (int i = 0; i < arr.length; i++) {
+     for (int i = 0; i < arr.length; i++) { // for문을 이용한 초기화
 
          if (i <= 7) { // 7번 인덱스 이하(생년월일, - , 성별)
-             arr[i] = input.charAt(i);
+             arr[i] = input.charAt(i); // 입력한 문자열까지
          } else { // 8번 인덱스 이상부터는 *
-             arr[i] = '*';
+             arr[i] = '*'; // *로 보이게 출력
          }
-         System.out.print(arr[i]);
+         System.out.print(arr[i]); // 배열의 인덱스 출력
      }
 	
 	
@@ -304,9 +304,9 @@ public class ArrayPractice {
 	
 	public void practice8() {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 
-        while (true) { // 3 이상의 수가 입력 될 때 까지 무한 반봅
+        while (true) { // 3 이상의 수가 입력 될 때 까지 무한 반복
             // -> 3 이상이 입력되면 break문으로 종료
 
             System.out.print("정수 : ");
@@ -316,8 +316,7 @@ public class ArrayPractice {
                 System.out.println("다시 입력하세요.");
 
             } else {
-                // 입력 받은 정수 만큼의 크기를 가지는 배열 생성
-                int[] arr = new int[input];
+                int[] arr = new int[input]; // 사용자가 입력하는 정수 만큼의 크기를 가지는 배열 생성
 
                 int num = 0; // arr 배열에 대입될 값
 
@@ -359,13 +358,13 @@ public class ArrayPractice {
 	public void practice9() {
 		
 		int arr[] = new int[10]; // 배열의 길이 10 선언 및 할당
-		for(int i=0 ; i<arr.length ; i++){
-            arr[i] = (int)(Math.random() * 10 + 1);
+		for(int i=0 ; i<arr.length ; i++){ // for문을 이용한 초기화
+            arr[i] = (int)(Math.random() * 10 + 1); // 배열의 인덱스에 랜덤 함수 1~10 을 선언 및 할당
         }
 
         System.out.print("발생한 난수 : ");
-        for(int i=0 ; i<arr.length ; i++){
-            System.out.print(arr[i] + " ");
+        for(int i=0 ; i<arr.length ; i++){ // 배열의 인덱스가 배열의 길이(크기)보다 작을때까지 반복
+            System.out.print(arr[i] + " "); // 배열의 인덱스(발생한 난수) 출력
         }
     }
 	
@@ -384,22 +383,22 @@ public class ArrayPractice {
 	
 	public void practice10() {
 		
-		int arr[] = new int[10];
+		int arr[] = new int[10]; // 배열의 길이 10 선언 및 할당
 		
 		// 2. 각 인덱스에 1부터 10 사이의 난수를 발생시켜 초기화 후 출력
-        for(int i=0; i<arr.length; i++) {
-            arr[i] = (int)(Math.random() * 10 + 1);
+        for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
+            arr[i] = (int)(Math.random() * 10 + 1); // 배열의 인덱스에 랜덤 함수 1~10 을 선언 및 할당
 
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + " "); // 배열의 인덱스(발생한 난수) 출력
         }
 
         System.out.println(); // 개행
 
         // 3. 반복문을 통해 최대값 최소값 알아내기
-        int max = 1;  // 최소값을 담아줄 변수
-        int min = 10; // 최대값을 담아줄 변수
+        int max = 1;  // 최소값을 담아줄 변수 선언 및 할당
+        int min = 10; // 최대값을 담아줄 변수 선언 및 할당
 
-        for(int i=0; i<arr.length; i++) {
+        for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 
             if(arr[i] > max) { // 해당 인덱스의 값이 max 보다 큰 경우
                 max = arr[i]; // 해당 값을 max 변수에 담아줌
@@ -410,8 +409,8 @@ public class ArrayPractice {
             }
         }
 
-        System.out.println("최대값 : " + max);
-        System.out.println("최소값 : " + min);
+        System.out.println("최대값 : " + max); // 최대값 출력
+        System.out.println("최소값 : " + min); // 최소값 출력
     }
 	
 	
