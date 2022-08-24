@@ -8,7 +8,9 @@ public class Run {
 
 		AbstractionService service = new AbstractionService();
 		
-		service.ex1();
+//		service.ex1();
+//		service.ex2();
+		service.ex3();
 		
 		
 	}
