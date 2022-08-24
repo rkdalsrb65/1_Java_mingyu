@@ -1,5 +1,6 @@
 package edu.kh.array.practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -327,10 +328,10 @@ public class ArrayPractice {
                     } else { // 중간 이후 -> 감소
                         arr[i] = --num;
                     }
-
+                    
                     // 출력 시 , 추가 (단, 마지막 제외)
                     if (i == arr.length - 1) { // 마지막 바퀴
-                        System.out.print(arr[i]);
+                        System.out.print(arr[i]); // 배열의 인덱스 출력
 
                     } else {
                         System.out.print(arr[i] + ", ");
@@ -423,26 +424,26 @@ public class ArrayPractice {
 	4 1 3 6 9 5 8 10 7 2	         */
 	
 	
-	public void practice11(){
+	public void practice11(){ 
         // 1. 10개의 값을 저장할 수 있는 정수형 배열 선언 및 할당
-        int[] arr = new int[10];
+        int[] arr = new int[10]; // 배열의 길이 10 선언 및 할당
 
         // 2. 각 인덱스 값에 1부터 10 사이의 난수를 발생시키는데 이때 중복이 없도록
-        for(int i=0; i<arr.length; i++) {
+        for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 
-            arr[i] = (int)(Math.random() * 10 + 1);
+            arr[i] = (int)(Math.random() * 10 + 1); // 배열의 인덱스에 랜덤 함수 1~10 을 선언 및 할당
 
             for(int j=0; j<i; j++) { // 중복 제거
-                if(arr[i] == arr[j]) {
+                if(arr[i] == arr[j]) { // 배열의 인덱스가 같은 수라면
                     i--;
-                    break;
+                    break; // 10개의 난수가 전부 나오면 반복을 멈춤
                 }
             }
         }
 
         // 3. 출력
-        for(int i=0; i<arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for(int i=0; i<arr.length; i++) { // 배열의 인덱스가 배열의 길이(크기) 반복 실행
+            System.out.print(arr[i] + " "); // 배열의 인덱스(중복이 없는 난수) 출력
         }
     }
 	
@@ -457,16 +458,16 @@ public class ArrayPractice {
 	
 	 public void practice12(){
 	        // 1. 크기가 6인 정수형 배열 선언 및 할당
-	        int[] lotto = new int[6];
+	        int[] lotto = new int[6]; // // 로또 배열의 길이 6 선언 및 할당
 
 	        // 2. 배열에 중복값없이 1부터 45사이의 난수 초기화
-	        for(int i=0; i<lotto.length; i++) {
-	            lotto[i] = (int)(Math.random() * 45 + 1);
+	        for(int i=0; i<lotto.length; i++) { // for문을 이용한 초기화
+	            lotto[i] = (int)(Math.random() * 45 + 1); // 1 ~ 45 난수 생성
 
 	            for(int j=0; j<i; j++) { // 중복 제거
-	                if(lotto[i] == lotto[j]) {
+	                if(lotto[i] == lotto[j]) { // 로또 배열의 인덱스가 같은 수라면
 	                    i--;
-	                    break;
+	                    break; // 45개의 난수가 전부 나오면 반복을 멈춤
 	                }
 	            }
 	        }
@@ -485,16 +486,16 @@ public class ArrayPractice {
 	
 	        public void practice13(){
 	            // 1. 사용자에게 문자열 입력받기
-	            Scanner sc = new Scanner(System.in);
+	            Scanner sc = new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 
 	            System.out.print("문자열 : ");
 	            String str = sc.nextLine();
 
 	            // 2. 해당 문자열의 문자들을 char[]에 담기
-	            char[] arr = new char[str.length()];
+	            char[] arr = new char[str.length()]; // 사용자가 입력한 문자열 길이만큼의 char배열을 할당
 
-	            for(int i=0; i<arr.length; i++) {
-	                arr[i] = str.charAt(i);
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
+	                arr[i] = str.charAt(i); // 배열의 인덱스는 사용자가 입력한 문자열
 	            }
 
 	            // 3. char배열에서 중복값 존재할 경우 출력X,
@@ -502,31 +503,31 @@ public class ArrayPractice {
 
 	            System.out.print("문자열에 있는 문자 : ");
 
-	            for(int i=0; i<arr.length; i++) {
+	            for(int i=0; i<arr.length; i++) { // for문을 이용한 초기화
 
 	                boolean flag = true; // 중복 체크용 flag
 
-	                for(int j=0; j<i; j++) {
-	                    if(arr[i] == arr[j]) {
-	                        flag = false; // 중복이발생했을 때
-	                        break;
+	                for(int j=0; j<i; j++) { // for문을 이용한 초기화
+	                    if(arr[i] == arr[j]) { // 배열의 인덱스가 같은 문자열이라면
+	                        flag = false; // 중복이 발생했을 때
+	                        break; // 반복을 멈춤
 	                    }
 	                }
 
 	                if(flag) { // 중복이 발생하지 않았을 경우
 
-	                    if(i == 0) {
-	                        System.out.print(arr[i]);
-	                    }else {
-	                        System.out.print(", " + arr[i]);
+	                    if(i == 0) { // 인덱스 번호가 0 이라면
+	                        System.out.print(arr[i]); // 배열의 인덱스를 출력하고
+	                    }else { // 아니라면
+	                        System.out.print(", " + arr[i]); // ,과 배열의 인덱스를 출력한다
 	                    }
 
-	                    count++;
+	                    count++; // 문자 개수 누적
 	                }
 	            }
 
-	            System.out.println();
-	            System.out.println("문자 개수 : " + count);
+	            System.out.println(); // 줄 바꿈 (개행)
+	            System.out.println("문자 개수 : " + count); // 누적된 문자 개수 출력
 	        }
 	
 	
@@ -563,32 +564,32 @@ public class ArrayPractice {
 	        public void practice14(){
 
 	            // 1. 첫 배열 크기 지정
-	            Scanner sc= new Scanner(System.in);
+	            Scanner sc= new Scanner(System.in); // 사용자에게 입력 받기 위해 Scanner 사용
 
 	            System.out.print("배열의 크기를 입력하시오 : ");
 	            int size = sc.nextInt();
-	            sc.nextLine();
+	            sc.nextLine(); // 문자 입력 버퍼 제거
 
-	            String[] arr = new String[size];
+	            String[] arr = new String[size]; // 문자형 배열 크기를 사용자가 지정
 
 	            // 2. 첫 배열에 저장할 문자열 입력 받기
-	            for(int i=0; i<arr.length ; i++) {
+	            for(int i=0; i<arr.length ; i++) { // for문을 이용한 초기화
 	                System.out.print((i+1) + "번째 문자열 : ");
-	                arr[i] = sc.nextLine();
+	                arr[i] = sc.nextLine(); // 배열의 인덱스의 길이를 사용자가 지정
 	            }
 
 	            // 3. 반복이 시작되는 구간부터 무한루프로 작성하여 내부에 종료 조건을 만들어 break
 	            while(true) {
 	                System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
-	                char ch = sc.nextLine().charAt(0);
+	                char ch = sc.nextLine().charAt(0); // Y나 N을 입력하기 위한 문자열 char Scanner 사용
 
 	                // 4. 값을 더 입력할 경우
-	                if(ch == 'y' || ch == 'Y') {
+	                if(ch == 'y' || ch == 'Y') { // 사용자가 입력할 값이 y나 Y라면
 
 	                    // 5. 더 입력받을 개수 입력 받기
 	                    System.out.print("더 입력하고 싶은 개수 : ");
 	                    int addSize = sc.nextInt();
-	                    sc.nextLine();
+	                    sc.nextLine(); // 입력 버퍼 제거
 
 	                    // 6. 새로 값을 입력 받을 배열 생성 --> 기존 배열 크기 + 추가 입력 개수
 	                    String[] newArr = new String[arr.length + addSize];
@@ -627,7 +628,7 @@ public class ArrayPractice {
 	(2, 0)(2, 1)(2, 2)	                */
 	
 	        public void practice15(){
-	            String[][] arr = new String[3][3];
+	            String[][] arr = new String[3][3]; // 배열의 길이(크기)를 [3][3] 선언 및 할당
 
 	            for(int i=0; i<arr.length; i++) {
 	                for(int j=0; j<arr[i].length; j++) {
@@ -1062,7 +1063,7 @@ public class ArrayPractice {
 	        /* 실습문제 24
 	        실습문제9와 내용은 같으나 행 입력 시 99가 입력되지 않으면 무한 반복이 되도록 구현하세요.
 	         */
-	        public void practice24(){
+	        public void practice24() {
 	            Scanner sc = new Scanner(System.in);
 	            String[][] board = new String[6][6]; // String 6행 6열 2차원 배열 생성
 
@@ -1095,7 +1096,7 @@ public class ArrayPractice {
 	                    break;
 	                }
 
-	                if(rowIndex == 99){
+	                if(rowIndex == 99) {
 	                    System.out.println("프로그램 종료");
 	                    break;
 	                }
