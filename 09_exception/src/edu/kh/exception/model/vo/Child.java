@@ -7,6 +7,7 @@ public class Child extends Parent {
 
 	@Override
 	public void method() throws EOFException {
+		
 		// IOException -> Exception : 변경 불가
 		// 왜? Exception이 더 넓은(많은) 예외 처리가 가능
 		
