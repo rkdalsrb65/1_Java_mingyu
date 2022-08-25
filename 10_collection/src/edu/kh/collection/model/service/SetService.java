@@ -50,7 +50,7 @@ public class SetService {
 		// - 컬렉션에서 제공하는 컬렉션 객체 반복 접근자
 		// -> 컬렉션에 저장된 객체를 임의의 순서로 하나씩 꺼내는 역할
 		   
-		Iterator<String> it = new set.iterator();
+		Iterator<String> it = set.iterator();
 		
 		// Set.iterator();
 		// Set에 저장된 객체를 이용해서 Iterator 객체를 만들어 반환
@@ -156,6 +156,7 @@ public class SetService {
 		int i2 = i1; // int = Integer
 					 // int = Intger.intValue(); (int)
 		System.out.println(i1.intValue());
+		
 		
 		Set<Integer> lotto = new TreeSet<Integer>();
 		
