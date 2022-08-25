@@ -10,6 +10,16 @@ public class StudentService {
 	private List<Student> stdList = new ArrayList<Student>();
 							// Student 타입으로 제한된 ArrayList객체 생성
 
+	public StudentService() {
+		stdList.add(new Student("홍길동", 18, "서울시 강남구", 'M', 80));
+		stdList.add(new Student("김길순", 17, "서울시 중구", 'F', 90));
+		stdList.add(new Student("가나다", 19, "경기도 부천시", 'F', 100));
+	}
+	
+	
+	
+	
+	
 	/** stdList에 학생 정보 추가 메서드
 	 * @param name
 	 * @param age
@@ -47,6 +57,69 @@ public class StudentService {
 	 */
 	public List<Student> getStdList(){
 		return stdList;
+	}
+
+
+
+
+
+	/** 학생 정보 수정 메서드
+	 * @param idx
+	 * @param address
+	 * @param score
+	 * @return
+	 * true : 인덱스가 일치하는 학생 정보 수정 성공시
+	 * false : 인덱스가 일치하는 학생이 없을 경우
+	 */
+	public boolean updateStudent(int idx, String address, int score) {		
+		
+		// 입력 받은 idx가 stdList에 실제 존재하는 요소의 인덱스 범위를 넘어선 경우
+		if(idx >= stdList.size() || idx < 0) {
+			return false;
+			
+		} else {
+			stdList.get(idx).setAddress(address);
+			stdList.get(idx).setScore(score);
+			return true;
+		}
+		
+	}
+
+
+
+
+
+	/** 학생 정보 제거 메서드
+	 * @param idx
+	 */
+	public Student removeStudent(int idx) {
+		
+		// 일치하는 인덱스가 있으면 
+		// 해당 학생 정보를 stdList에서 제거하고
+		// 제거된 학생 정보를 반환
+		
+		// 일치하는 인덱스가 없다면 null 반환
+		
+		
+		
+		if(idx < 0 || idx >= stdList.size()) {
+			return null;
+		} else {
+			
+			// 리스트에서 제거된 요소를 반환
+			return stdList.remove(idx);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	

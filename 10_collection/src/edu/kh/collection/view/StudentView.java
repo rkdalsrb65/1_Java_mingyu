@@ -38,8 +38,8 @@ public class StudentView {
 			switch(input) {
 			case 1 : addStudent(); break;
 			case 2 : selectAll(); break;
-			case 3 : break;
-			case 4 : break;
+			case 3 : updateStudent(); break;
+			case 4 : removeStudent(); break;
 			case 5 : break;
 			case 6 : break;
 			case 0 : System.out.println("프로그램 종료"); break;
@@ -118,11 +118,81 @@ public class StudentView {
 		
 		List<Student> stdList = service.getStdList();
 		
+		// 일반 for문
+		for(int i = 0; i < stdList.size(); i++) {
+			System.out.println(stdList.get(i)/*.toString()*/);
+			// .toString() 사용하지 않아도 자동으로 사용됨
+		}
+		
+		System.out.println("---------------------");
+		
+		// 향상된 for문
+		// - 배열 또는 컬렉션의 모든 요소를
+		// 처음부터 끝까지 순차 접근할 때 사용하는 for문 (foreach 문)
+		
+		// for(요소 하나를 꺼내서 참조할 변수 : 배열 또는 컬렉션)
+		
+		for(Student s : stdList) {
+			System.out.println(s);
+		}
+		
+		
 	}
 	
+	/**
+	 * 학생 정보 수정 메서드
+	 */
+	public void updateStudent() {
+		
+		System.out.println("[학생 정보 수정]");
+		
+		System.out.print("인덱스 : ");
+		int idx = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.println("수정할 주소 : ");
+		String address = sc.nextLine();
+		
+		System.out.println("수정할 점수 : ");
+		int score = sc.nextInt();
+		
+		// 입력 받은 값을 service로 전달하여
+		// 인덱스가 일치하는 학생 정보를 수정하면 "성공"
+		// 인덱스가 일치하는 학생이 없다면 "실패(인덱스 불일치)" 출력
+		
+		if(service.updateStudent(idx, address, score)) {
+			System.out.println("성공");
+		} else {
+			System.out.println("실패(인덱스 불일치)");
+		}
+		
+		
+		
+	}
 	
-	
-	
+	/**
+	 * 4. 학생 정보 제거
+	 */
+	public void removeStudent() {
+		System.out.println("[학생 정보 제거]");
+		
+		System.out.print("인덱스 : ");
+		int idx = sc.nextInt();
+		
+		Student s = service.removeStudent(idx);
+		
+		if(s == null) {
+			System.out.println("실패(인덱스 불일치)");
+		} else {
+			System.out.println(s.getName() + "학생의 정보가 삭제되었습니다.");
+		}
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
