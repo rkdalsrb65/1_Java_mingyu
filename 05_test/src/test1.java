@@ -689,11 +689,32 @@ Unchecked Exception으로 주로 프로그래머의 부주의로 인한 오류�
 
 List : 자료들을 순차적으로 나열한 자료구조로 인덱스로 관리되며, 중복해서 객체 저장 가능
 
+ArrayList
+List의 후손으로 초기 저장 용량은 10으로 자동 설정되며 따로 지정도 가능
+저장 용량을 초과한 객체들이 들어오면 자동으로 늘어나며 고정도 가능
+동기화(Synchronized)를 제공하지 않음
 
+Vector
+List의 후손
+ArrayList와 동등하지만 동기화(Synchronized)를 제공한다는 점이 ArrayList와 차이점
+List 객체들 중에서 가장 성능이 좋지 않음
 
+LinkedList
+List의 후손으로, 인접 참조를 링크해 체인처럼 관리
+특정 인덱스에서 객체를 제거하거나 추가하게 되면 바로 앞/뒤 링크만 변경하면 되기 때문에
+객체 삭제와 삽입이 빈번하게 일어나는 곳에서는 ArrayList보다 성능이 좋음
 
+Set
+저장 순서가 유지되지 않고, 중복 객체도 저장하지 못하게 하는 자료 구조
+null도 중복을 허용하지 않기 때문에 1개의 null만 저장
+구현 클래스로 HashSet, LinkedHashSet, TreeSet이 있음
 
+HashSet
+Set에 객체를 저장할 때 hash함수를 사용하여 처리 속도가 빠름
+동일 객체 뿐 아니라 동등 객체도 중복하여 저장하지 않음
 
+LinkedHashSet
+HashSet과 거의 동일하지만 Set에 추가되는 순서를 유지한다는 점이 다름
 
 
 
