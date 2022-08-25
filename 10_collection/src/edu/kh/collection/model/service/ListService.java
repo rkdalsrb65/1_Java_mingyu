@@ -47,11 +47,28 @@ public class ListService {
 		// remove(int index) : index 위치의 객체를 꺼내서 반환
 		Object student = list.remove(2);
 		
+		// size() : List에 저장된 요소의 개수를 반환
+		// get(int index) : index에 위치한 객체를 얻어옴
+		
+		for(int i = 0; i < list.size(); i++) {
+			// 얻어온 요소가 Student이면 학생의 이름을 출력
+			
+			if(list.get(i) instanceof Student) {
+				System.out.println( ((Student)list.get(i)).getName());
+			}
+		
+		
+		}
 		
 		System.out.println("종료");
 		
 	}
 	
-	
+	public void ex2() {
+		
+		
+		
+		
+	}
 	
 }
