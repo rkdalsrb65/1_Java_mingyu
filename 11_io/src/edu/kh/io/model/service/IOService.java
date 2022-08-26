@@ -1,9 +1,14 @@
 package edu.kh.io.model.service;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class IOService {
 
@@ -87,6 +92,133 @@ public class IOService {
 		
 		
 	}
+	
+	
+	public void input() {
+		
+		FileInputStream fis = null; // 바이트 기반
+		
+		FileReader fr = null; // 문자 기반
+		
+		try {
+			fis = new FileInputStream("char/charTest.txt");
+										// 파일 경로
+			// throws FileNotFoundException
+			int value = 0; // 파일에서 읽어온 값을 저장할 변수
+			
+			// fis.read() : 다음 1byte를 읽어와 int형으로 반환
+			//				단, 읽어올 내용이 없으면 -1 반환
+
+			
+			//			while( (value = fis.read() ) != -1)
+			
+			while(true) {
+				value = fis.read();
+				if(value == -1) break;
+				System.out.print((char)value);
+			}
+				
+			System.out.println("\n-----------------------------");
+			
+			fr = new FileReader("char/charTest.txt");
+			// throws FileNotFoundException
+			while(true) {
+				value = fr.read();
+				if(value == -1) break;
+				System.out.print((char)value);
+			}
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				// 스트림 객체 자원 반환
+				
+				if(fis != null) fis.close(); // 참조하는 스트림이 있을때만 닫아줌
+				if(fr != null) fr.close();
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+	// 어떤 형식의 파일이든 복사하기
+	public void fileCopy() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		// 보조 스트림(혼자 생성되서 입/출력할 수 없는 스트림)
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
+		
+		try {
+			System.out.print("복사할 파일의 경로 : ");
+			String input = sc.nextLine();
+			
+			bis = new BufferedInputStream(new FileInputStream(input));
+			// new BufferedInputStream(기반 스트림)
+			
+			System.out.print("복사 위치+파일명 : ");
+			String output = sc.nextLine();
+			bos = new BufferedOutputStream(new FileOutputStream(output));
+			
+			// Buffered 보조 스트림
+			// -> 버퍼를 이용해서 1byte/1문자 씩이 아닌
+			// 한번에 많은 내용을 입/출력 할 수 있게하는 보조 스트림(속도 up)
+			
+			int value = 0;
+			
+			while(true) {
+				
+				value = bis.read();
+				// 바이트 스트림이기 때문에 1byte 읽어오지만
+				// 한글 같은 2byte 문자가 버퍼에 쌓이면 깨졌던 모양이 복구됨
+				
+				if(value == -1) break;
+				
+				bos.write(value);
+				// 1byte 씩 출력되는 것 같으나
+				// 내부 버퍼에 출력되는 내용이 모여서 한번에 출력됨
+			}
+			
+			System.out.println("복사 완료");
+			
+		} catch(FileNotFoundException e) {
+			System.out.println("파일을 찾을 수 없습니다.");
+			e.printStackTrace();
+		} catch(IOException e) {
+			System.out.println("입/출력 과정에서 오류가 발생했습니다.");
+			e.printStackTrace();
+		} finally {
+			try {
+				if(bis != null) bis.close();
+				if(bos != null) bos.close();
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+		} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
 	
 	
 	
