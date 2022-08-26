@@ -10,7 +10,7 @@ public class Run {
 
 //		service.output();
 //		service.input();
-		service.fileCopy();
+//		service.fileCopy();
 		
 	}
 
