@@ -17,25 +17,19 @@ public class ServerService {
 	
 	/* TCP
 	 * - 서버, 클라이언트간의 1:1 소켓 통신(연결 지향적 프로토콜)
-	 * - 서버가 먼저 실행되어 있는 상태에서
-	 *   클라이언트가 연결해야함.
+	 * - 서버가 먼저 실행되어 있는 상태에서 클라이언트가 연결해야함.
 	 *   
-	 * - 데이터 전송 순서가 보장되고,
-	 *   수신 여부를 판단하여 오류(손실) 발생 시 재전송함.
+	 * - 데이터 전송 순서가 보장되고, 수신 여부를 판단하여 오류(손실) 발생 시 재전송함.
 	 *   
-	 * *java.net 패키지에서 제공하는
-	 * Socket, ServerSocket 클래스를 사용해야함!
-	 * 
+	 * *java.net 패키지에서 제공하는 Socket, ServerSocket 클래스를 사용해야함!
 	 * 
 	 *  Socket 
 	 *  - 프로세스의 양 끝단(프로세스간의 통신을 담당)
 	 *  - Input/OutputStream을 보유하고 있음.  
 	 *  
-	 *  
 	 *  ServerSocket
 	 *  - 포트와 연결되어 외부 요청을 기다리는 객체
-	 *  - 클라이언트의 연결 요청이 들어오면
-	 *    클라이언트의 소켓을 얻어와 연결하게된다.
+	 *  - 클라이언트의 연결 요청이 들어오면 클라이언트의 소켓을 얻어와 연결하게된다.
 	 *    
 	 *  - 하나의 포트에는 하나의 ServerSocket만 연결 가능
 	 * */
@@ -101,7 +95,7 @@ public class ServerService {
 			// SimpleDateFormat : 날짜 형식을 간단히 지정하는 객체
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 HH:mm:ss");
 			
-			String str = sdf.format(now) + "  [서버 접속 성공]";
+			String str = sdf.format(now) + " [서버 접속 성공] ";
 			
 			pw.println(str); // 서버 -> 클라이언트로 출력
 			pw.flush(); // flush() : 스트림의 내용을 밀어냄
@@ -119,15 +113,14 @@ public class ServerService {
 		}catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-	//		8) 통신 종료
+			// 8) 통신 종료
 			
 			try {
 				// 스트림/소켓 닫기
 				
 				if(br != null) br.close(); // + is.close()
 				if(pw != null) pw.close(); // + os.close()
-				// 보조스트림을 닫게 되면
-				// 연결된 기반 스트림도 같이 닫게된다!
+				// 보조스트림을 닫게 되면 연결된 기반 스트림도 같이 닫게된다!
 				
 				if(serverSocket != null) serverSocket.close();
 				if(clientSocket != null) clientSocket.close();

@@ -14,8 +14,7 @@ public class ClientService {
 	// TCP Socket 프로그래밍
 	
 	public void clientStart() {
-		// 1) 서버의 IP주소와 서버가 정한 포트번호를 매개변수로 하여 
-		//   클라이언트용 소켓 객체 생성
+		// 1) 서버의 IP주소와 서버가 정한 포트번호를 매개변수로 하여 클라이언트용 소켓 객체 생성
 		
 		String serverIP = "127.0.0.1"; // loop back IP(현재 컴퓨터를 나타내는 IP)
 		int port = 8500;
@@ -76,8 +75,7 @@ public class ClientService {
 				
 				if(br != null) br.close(); // + is.close()
 				if(pw != null) pw.close(); // + os.close()
-				// 보조스트림을 닫게 되면
-				// 연결된 기반 스트림도 같이 닫게된다!
+				// 보조스트림을 닫게 되면 연결된 기반 스트림도 같이 닫게된다!
 				
 				if(clientSocket != null) clientSocket.close();
 				
