@@ -19,7 +19,8 @@ public class IOService {
 		
 		String content = "Hello World\n"
 						+ "1234567890\n"
-						+ "오늘은 금요일 입니다.";
+						+ "오늘은 금요일 입니다.\n"
+						+ "점심 어떤게 좋을까요?";
 		
 		// * 스트림 객체 생성 시 예외처리가 필요함
 		
@@ -35,13 +36,16 @@ public class IOService {
 		
 		
 		try {
-			fos = new FileOutputStream("byte/byteTest.txt");
-			   // new FileOutputStream("출력할 파일 경로");
+			fos = new FileOutputStream("byte/byteTest.txt", true);
+			   // new FileOutputStream("출력할 파일 경로", 이어쓰기여부);
 			// -> 파일이 없으면 생성됨
+			// 새롭게 실행 될 때 마다 파일/내용 덮어쓰기
+			// 이어쓰기여부를 true로 하면 이전 내용 이어쓰기 된다. (log 작성 시 많이 사용)
 			
 			// 1byte씩 파일로 출력
 			for(int i = 0; i < content.length(); i++) {
 				fos.write(content.charAt(i));
+				// void java.io.FileOutputStream.write(int b) throws IOException
 			}
 			
 			
@@ -51,8 +55,8 @@ public class IOService {
 			
 			// -------------------------
 			
-			fw = new FileWriter("char/charTest.txt");
-			  // new FileWriter("출력할 파일 경로");
+			fw = new FileWriter("char/charTest.txt", true);
+			  // new FileWriter("출력할 파일 경로", 이어쓰기여부);
 			// -> 파일이 없으면 생성됨
 			
 			fw.write(content);
@@ -66,8 +70,16 @@ public class IOService {
 			e.printStackTrace();
 		} finally {
 			try {
+				
+				// 스트림.close() :
+				// 스트림 내부에 존재하는 데이터를 모두 밀어낸 후
+				// 스트림 객체 자원(메모리) 반환
+				// -> 필수 작성!
+				
 				fos.close();
 				fw.close();
+				
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
