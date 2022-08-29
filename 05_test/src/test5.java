@@ -6,8 +6,16 @@ public class test5 {
 
 
 1. Class 정의와 작성법에 대해서 서술하시오.
+객체의 특성을 정의해 놓은 틀(설계도)
+[접근제한자] [예약어] class 클래스명 {}
 
 2. 접근제한자의 종류와 제한 범위를 서술하세요.
+public : 전체
+protected : 패키지 + 후손 클래스
+(default) : 패키지
+private : 해당 클래스
+
+
 
 3. static이란 무엇인지 서술하세요.
 
