@@ -124,7 +124,7 @@ public class EmployeeView {
 		System.out.println("<전체 사원 정보 조회>");
 		printAll(service.selectAll());
 		
-//		List<Employee> empList = service.getEmpList();
+		List<Employee> empList = service.getEmpList();
 //		
 //		// 일반 for문
 //		for(int i = 0; i < empList.size(); i++) {
@@ -140,9 +140,9 @@ public class EmployeeView {
 //		
 //		// for(요소 하나를 꺼내서 참조할 변수 : 배열 또는 컬렉션)
 //		
-//		for(Employee e : empList) {
-//			System.out.println(e);
-//		}
+		for(Employee e : empList) {
+			System.out.println(e);
+		}
 		
 		
 	}
@@ -155,7 +155,7 @@ public class EmployeeView {
 	 * 사원 번호가 일치하는 사원 정보 조회
 	 */
 	public void selectEmpId() {
-		System.out.println("<사번이 일치하는 차원 정보 조회>");
+		System.out.println("사번이 일치하는 사원 정보 조회");
 		int empId = inputEmpId();
 		
 		printOne(service.selectEmpNo(empId));
@@ -176,7 +176,7 @@ public class EmployeeView {
 	 * 사원 번호가 일치하는 사원 정보 수정
 	 */
 	public void updateEmployee() {
-		System.out.println("<사번이 일치하는 사원 정보 수정>");
+		System.out.println("사번이 일치하는 사원 정보 수정");
 	
 		int empId = inputEmpId();
 
@@ -216,7 +216,9 @@ public class EmployeeView {
 	 * 사원 번호가 일치하는 사원 정보 삭제
 	 */
 	public void deleteEmployee() {
-		System.out.println("<사번이 일치하는 사원 정보 삭제>");
+		
+		System.out.print("사원번호 : ");
+		System.out.println("사번이 일치하는 사원 정보 삭제");
 		
 		int empId = inputEmpId();
 		
@@ -308,9 +310,9 @@ public class EmployeeView {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
 			
 		} else {
-			System.out.println("사번 |   이름  | 주민 등록 번호 |        이메일        |   전화 번호   | 부서 | 직책 | 급여" );
+			System.out.println("사번 / 이름 / 주민 등록 번호 / 이메일 / 전화 번호 / 부서 / 직책 / 급여" );
 			System.out.println("------------------------------------------------------------------------------------------------");
-			System.out.printf(" %2d  | %4s | %s | %20s | %s | %s | %s | %d\n",
+			System.out.printf(" %2d | %4s | %s | %20s | %s | %s | %s | %d\n",
 					emp.getEmpId(), emp.getEmpName(), emp.getEmpNo(), emp.getEmail(), 
 					emp.getPhone(), emp.getDepartmentTitle(), emp.getJobName(), emp.getSalary());
 		}
