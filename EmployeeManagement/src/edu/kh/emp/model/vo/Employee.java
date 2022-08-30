@@ -1,5 +1,7 @@
 package edu.kh.emp.model.vo;
 
+import java.util.Objects;
+
 public class Employee {
 	
 	private int empId; // 사원 번호(사번)
@@ -101,7 +103,30 @@ public class Employee {
 	
 	
 	
-	
+	// hashCode() 오버라이딩
+		// -> Hash라는 단어가 들어가는 컬렉션 사용 시
+		// 반드시 오버라이딩 해야되는 메서드 
+		// (필드 값을 이용해서 정수를 만들어냄)
+		
+		@Override
+		public int hashCode() {
+			return Objects.hash(empId, empName, empNo, email, phone, departmentTitle, jobName, salary);
+		} // 필드가 모두 동일하면 같은 숫자가 반환된다
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Employee other = (Employee) obj;
+			return empId == other.empId && Objects.equals(empName, other.empName)
+					&& Objects.equals(empNo, other.empNo) && Objects.equals(email, other.email)
+					&& Objects.equals(phone, other.phone) && Objects.equals(departmentTitle, other.departmentTitle)
+					&& Objects.equals(jobName, other.jobName) && salary == other.salary;
+		}
 	
 	
 	
