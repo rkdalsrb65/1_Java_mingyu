@@ -2,6 +2,7 @@ package edu.kh.emp.model.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import edu.kh.emp.model.vo.Employee;
 
@@ -38,13 +39,40 @@ public class EmployeeService {
 	public List<Employee> getEmpList() {
 		return empList;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+	public boolean addEmp(Employee emp) {
+		return false;
+	}
+
+	public Object selectAll() {
+		return null;
+	}
+
+	public Object selectEmpNo(int empId) {
+		return null;
+	}
+
+	public Employee updateEmployee(Employee updateEmp) {
+		return null;
+		
+	}
+
+	public Object selectDepartment(String departmentTitle) {
+		
+		return null;
+	}
+
+	public Object selectSalary(int salary) {
+		
+		return null;
+	}
+
+	public Map<String, Integer> departmentalSalay() {
+		
+		return null;
+	}
 	
 	
 	

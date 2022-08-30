@@ -10,7 +10,6 @@ public class EmployeeRun {
 		
 		EmployeeService service = new EmployeeService();
 
-//		service.();
 		new EmployeeView().displayMenu();
 	}
 
