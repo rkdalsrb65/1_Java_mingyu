@@ -108,8 +108,6 @@ public class Employee {
 				+ salary + "]";
 	}
 	
-	
-	
 		// hashCode() 오버라이딩
 		// -> Hash라는 단어가 들어가는 컬렉션 사용 시
 		// 반드시 오버라이딩 해야되는 메서드 
@@ -134,32 +132,4 @@ public class Employee {
 //					&& Objects.equals(phone, other.phone) && Objects.equals(departmentTitle, other.departmentTitle)
 //					&& Objects.equals(jobName, other.jobName) && salary == other.salary;
 //		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
