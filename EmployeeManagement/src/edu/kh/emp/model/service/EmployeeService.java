@@ -124,9 +124,8 @@ public class EmployeeService implements EmployeeService2{
 				int value =  map.get(key) == null ? 0 : map.get(key); // 삼항 연산자
 							// map에서 일치하는 key가 없으면 0, 있으면 해당 value 반환
 				map.put(key, value + emp.getSalary());
-			}
-			
-			return map;
+			}			
+			return map;	
 		}
 		
 }
