@@ -6,15 +6,16 @@ import java.util.Map;
 import java.util.Scanner;
 
 import edu.kh.emp.model.service.EmployeeService;
+import edu.kh.emp.model.service.EmployeeService2;
 import edu.kh.emp.model.vo.Employee;
 
-public class EmployeeView {
-	// 필드
-	private Scanner sc = new Scanner(System.in);
+public class EmployeeView implements EmployeeView2 {
+
+	private Scanner sc = new Scanner(System.in); // 필드
 	
-	// 기능 제공용 클래스
-	private EmployeeService service = new EmployeeService();
+	private EmployeeService2 service = new EmployeeService(); // 기능 제공용 클래스
 	
+	@Override
 	public void displayMenu() {
 		
 		int input = 0;
@@ -33,19 +34,19 @@ public class EmployeeView {
 				System.out.println("8. 부서별 급여 합 전체 조회");
 				System.out.println("0. 프로그램 종료");
 			
-				System.out.println("메뉴 선택 >> ");
+				System.out.print("메뉴 선택 >> ");
 				input = sc.nextInt();
 				System.out.println();	
 			
 				switch(input) {
 				case 1 : addEmp(); break;
 				case 2 : selectAll(); break;
-				case 3: selectEmpId(); break;
-				case 4: updateEmployee(); break;
-				case 5: deleteEmployee(); break;
-				case 6: selectDepartment(); break;
-				case 7: selectSalary(); break;
-				case 8: departmentalSalay(); break;
+				case 3 : selectEmpId(); break;
+				case 4 : updateEmployee(); break;
+				case 5 : deleteEmployee(); break;
+				case 6 : selectDepartment(); break;
+				case 7 : selectSalary(); break;
+				case 8 : departmentalSalay(); break;
 				case 0 : System.out.println("0. 프로그램 종료"); break;
 				default : System.out.println("번호만 입력해주세요.");
 			
@@ -77,9 +78,10 @@ public class EmployeeView {
 	/**
 	 * 1. 사원 정보 추가 메서드
 	 */
+	
 	public void addEmp() {
 		System.out.println("===== 사원 정보 추가 =====");
-		// 사원 번호, 사원 이름, 주민등록번호, 이메일, 전화번호, 부서명, 직급명, 급여
+		// 사원 이름, 주민등록번호, 이메일, 전화번호, 부서명, 직급명, 급여
 		
 		System.out.print("사원 번호(사번) : ");
 		int empId = sc.nextInt();
@@ -147,9 +149,9 @@ public class EmployeeView {
 		
 	}
 
-	private void printAll(Object selectAll) {
-		
-	}
+//	private void printAll(Object selectAll) {
+//		
+//	}
 	
 	/**
 	 * 사원 번호가 일치하는 사원 정보 조회
@@ -161,14 +163,15 @@ public class EmployeeView {
 		printOne(service.selectEmpNo(empId));
 	}
 
-	private void printOne(Object selectEmpNo) {
-		
-	}
-
-	private int inputEmpId() {
-		return 0;
-	}
 	
+	
+//	private void printOne(Object selectEmpNo) {
+//		
+//	}
+
+//	private int inputEmpId() {
+//		return 0;
+//	}
 	
 	
 
@@ -180,7 +183,7 @@ public class EmployeeView {
 	
 		int empId = inputEmpId();
 
-		if( service.selectEmpNo(empId) == null ) {
+		if(service.selectEmpNo(empId) == null) {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
 	
 		} else {
@@ -220,15 +223,14 @@ public class EmployeeView {
 		
 		int empId = inputEmpId();
 		
-		if( service.selectEmpNo(empId) == null) {
+		if(service.selectEmpNo(empId) == null) {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
 		} else {
-			
 			System.out.print("정말로 삭제하시겠습니까? (Y/N) : ");
 			char ch = sc.next().toUpperCase().charAt(0);
 			
 			if(ch == 'Y') {
-				Employee deleteEmp = service.updateEmployee(empId);
+				Employee deleteEmp = service.deleteEmployee(empId);
 				System.out.println(deleteEmp.getEmpName() + "의 정보가 삭제되었습니다.");
 			} else {
 				System.out.println("삭제 취소");
@@ -288,7 +290,7 @@ public class EmployeeView {
 			System.out.println("조회된 사원 정보가 없습니다.");
 			
 		} else {
-			System.out.println("사번 |   이름  | 주민 등록 번호 |        이메일        |   전화 번호   | 부서 | 직책 | 급여" );
+			System.out.println("사번 | 이름 | 주민등록번호 | 이메일 | 전화 번호 | 부서 | 직책 | 급여" );
 			System.out.println("------------------------------------------------------------------------------------------------");
 			for(Employee emp : empList) { 
 				System.out.printf(" %2d  | %4s | %s | %20s | %s | %s | %s | %d\n",
@@ -308,7 +310,7 @@ public class EmployeeView {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
 			
 		} else {
-			System.out.println("사번 |   이름  | 주민 등록 번호 |        이메일        |   전화 번호   | 부서 | 직책 | 급여" );
+			System.out.println("사번 | 이름 | 주민등록번호 | 이메일 | 전화 번호 | 부서 | 직책 | 급여");
 			System.out.println("------------------------------------------------------------------------------------------------");
 			System.out.printf(" %2d  | %4s | %s | %20s | %s | %s | %s | %d\n",
 					emp.getEmpId(), emp.getEmpName(), emp.getEmpNo(), emp.getEmail(), 
@@ -326,6 +328,18 @@ public class EmployeeView {
 		int empNo = sc.nextInt();
 		sc.nextLine();
 		return empNo;
+	}
+
+	@Override
+	public void addEmployee() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int inputEmpId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}	
 	
 	
