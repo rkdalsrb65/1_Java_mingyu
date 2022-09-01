@@ -9,7 +9,7 @@ import edu.kh.emp.model.vo.Employee;
 
 public class EmployeeService implements EmployeeService2{
 
-	/** addList에 사원 정보 추가 메서드
+	/**addList에 사원 정보 추가 메서드
 	 * @param empId
 	 * @param empName
 	 * @param empNo
@@ -33,15 +33,7 @@ public class EmployeeService implements EmployeeService2{
 		empList.add(new Employee(empIdCount++, "고고고", "010202-1777777", "rh@rh.com", "010-7777-7777", "마케팅", "사원", 4000000));
 	}
 	
-	
-//	public boolean addEmp(int empId, String empName, String empNo, String email, String phone, String departmentTitle,
-//			String jobName, int salary) {
-//		Employee emp = new Employee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary);
-//		return empList.add(emp);
-//	}
-
-	
-	// 새로운 사원 정보 추가 서비스 
+		// 새로운 사원 정보 추가 서비스 
 		@Override
 		public boolean addEmp(Employee emp) {
 			emp.setEmpId(empIdCount++);
@@ -136,116 +128,5 @@ public class EmployeeService implements EmployeeService2{
 			
 			return map;
 		}
-	
-	
-	
-	
-	
-	
-	
-	
-//	public void EmployeeService() {
-//		
-//	}
 
-	
-	
-//	/** 사원 전체 조회 시 stdList 반환 메서드
-//	 * @return
-//	 */
-//	public List<Employee> getEmpList() {
-//		return empList;
-//	}
-//
-//
-//
-//	public boolean addEmp(Employee emp) {
-//		return false;
-//	}
-//
-//	public Object selectAll() {
-//		return null;
-//	}
-//
-//	public Object selectEmpNo(int empId) {
-//		return null;
-//	}
-//
-//	public Employee updateEmployee(Employee updateEmp) {
-//		return null;
-//		
-//	}
-//
-//	public Object selectDepartment(String departmentTitle) {
-//		
-//		return null;
-//	}
-//
-//	public Object selectSalary(int salary) {
-//		
-//		return null;
-//	}
-//
-//	public Map<String, Integer> departmentalSalay() {
-//		
-//		return null;
-//	}
-//
-//	public Employee updateEmployee(int empId) {
-//		
-//		return null;
-//	}
-//	
-//	
-//	
-//	
-	
-	
-	
-	/** 사원 전체 조회 시 stdList 반환 메서드
-	 * @return
-	 */
-//	public List<Employee> getEmpList() {
-//		return empList;
-//	}
-//
-//
-//
-//	public boolean addEmp(Employee emp) {
-//		return false;
-//	}
-//
-//	public Object selectAll() {
-//		return null;
-//	}
-//
-//	public Object selectEmpNo(int empId) {
-//		return null;
-//	}
-//
-//	public Employee updateEmployee(Employee updateEmp) {
-//		return updateEmp;
-//		
-//	}
-//
-//	public Object selectDepartment(String departmentTitle) {
-//		
-//		return departmentTitle;
-//	}
-//
-//	public Object selectSalary(int salary) {
-//		
-//		return salary;
-//	}
-//
-//	public Map<String, Integer> departmentalSalay() {
-//		
-//		return departmentalSalay();
-//	}
-//
-//	public Employee updateEmployee(int empId) {
-//		
-//		return null;
-//	}
-//	
 }
