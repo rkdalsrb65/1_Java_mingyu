@@ -345,6 +345,4 @@ public class EmployeeView implements EmployeeView2 {
 	
 	
 	
-	
-	
 }
