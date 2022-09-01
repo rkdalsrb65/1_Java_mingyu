@@ -155,8 +155,13 @@ public class EmployeeView implements EmployeeView2 {
 	 */
 	public void selectEmpId() {
 		System.out.println("<사번이 일치하는 차원 정보 조회>");
-		int empId = inputEmpId();
+		int empId = sc.nextInt();
 		
+		Employee result = service.selectEmpNo(empId);
+		
+		
+//		int empId = inputEmpId();
+//		
 		printOne(service.selectEmpNo(empId));
 	}
 
@@ -178,7 +183,13 @@ public class EmployeeView implements EmployeeView2 {
 	public void updateEmployee() {
 		System.out.println("<사번이 일치하는 사원 정보 수정>");
 	
-		int empId = inputEmpId();
+//		int empId = inputEmpId();
+		int empId = sc.nextInt();
+		
+		Employee result = service.selectEmpNo(empId);
+		
+		printOne(service.selectEmpNo(empId));
+		
 
 		if(service.selectEmpNo(empId) == null) {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
@@ -218,7 +229,13 @@ public class EmployeeView implements EmployeeView2 {
 	public void deleteEmployee() {
 		System.out.println("<사번이 일치하는 사원 정보 삭제>");
 		
-		int empId = inputEmpId();
+//		int empId = inputEmpId();
+		
+		int empId = sc.nextInt();
+		
+		Employee result = service.selectEmpNo(empId);
+
+		printOne(service.selectEmpNo(empId));
 		
 		if(service.selectEmpNo(empId) == null) {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
@@ -236,7 +253,6 @@ public class EmployeeView implements EmployeeView2 {
 		}
 		
 	}	
-	
 	
 
 	/**
