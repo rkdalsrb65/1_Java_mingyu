@@ -121,7 +121,6 @@ public class EmployeeService implements EmployeeService2{
 			return searchList;
 		}
 
-<<<<<<< HEAD
 		// 부서별 급여 합 전체 조회
 		@Override
 		public Map<String, Integer> departmentalSalay() {
@@ -203,54 +202,50 @@ public class EmployeeService implements EmployeeService2{
 	
 	
 	
-=======
-	
-	
 	/** 사원 전체 조회 시 stdList 반환 메서드
 	 * @return
 	 */
-	public List<Employee> getEmpList() {
-		return empList;
-	}
-
-
-
-	public boolean addEmp(Employee emp) {
-		return false;
-	}
-
-	public Object selectAll() {
-		return null;
-	}
-
-	public Object selectEmpNo(int empId) {
-		return null;
-	}
-
-	public Employee updateEmployee(Employee updateEmp) {
-		return updateEmp;
-		
-	}
-
-	public Object selectDepartment(String departmentTitle) {
-		
-		return departmentTitle;
-	}
-
-	public Object selectSalary(int salary) {
-		
-		return salary;
-	}
-
-	public Map<String, Integer> departmentalSalay() {
-		
-		return departmentalSalay();
-	}
-
-	public Employee updateEmployee(int empId) {
-		
-		return null;
-	}
-	
->>>>>>> 9f5484133fd73376bb5bc35d30375e9b4b40d706
+//	public List<Employee> getEmpList() {
+//		return empList;
+//	}
+//
+//
+//
+//	public boolean addEmp(Employee emp) {
+//		return false;
+//	}
+//
+//	public Object selectAll() {
+//		return null;
+//	}
+//
+//	public Object selectEmpNo(int empId) {
+//		return null;
+//	}
+//
+//	public Employee updateEmployee(Employee updateEmp) {
+//		return updateEmp;
+//		
+//	}
+//
+//	public Object selectDepartment(String departmentTitle) {
+//		
+//		return departmentTitle;
+//	}
+//
+//	public Object selectSalary(int salary) {
+//		
+//		return salary;
+//	}
+//
+//	public Map<String, Integer> departmentalSalay() {
+//		
+//		return departmentalSalay();
+//	}
+//
+//	public Employee updateEmployee(int empId) {
+//		
+//		return null;
+//	}
+//	
 }
