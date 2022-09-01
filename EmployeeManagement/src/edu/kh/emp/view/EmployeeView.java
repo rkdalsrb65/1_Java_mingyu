@@ -83,9 +83,6 @@ public class EmployeeView implements EmployeeView2 {
 		System.out.println("===== 사원 정보 추가 =====");
 		// 사원 이름, 주민등록번호, 이메일, 전화번호, 부서명, 직급명, 급여
 		
-		System.out.print("사원 번호(사번) : ");
-		int empId = sc.nextInt();
-		
 		System.out.print("사원 이름 : ");
 		String empName = sc.next();
 				
@@ -107,7 +104,7 @@ public class EmployeeView implements EmployeeView2 {
 		System.out.print("급여 : ");
 		int salary = sc.nextInt();
 		
-		Employee emp = new Employee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary);
+		Employee emp = new Employee(empName, empNo, email, phone, departmentTitle, jobName, salary);
 		
 		
 		if(service.addEmp(emp)) {
