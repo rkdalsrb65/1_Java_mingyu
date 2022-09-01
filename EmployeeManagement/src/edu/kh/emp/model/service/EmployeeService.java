@@ -24,11 +24,13 @@ public class EmployeeService implements EmployeeService2{
 	private List<Employee> empList = new ArrayList<>(); // 사원 정보를 저장하기 위한 list
 	
 	public EmployeeService() {
-		empList.add(new Employee(empIdCount++, "김대표", "700509-1234567", "dp_hong@emp.com", "010-1111-1111", "대표", "대표", 10000000));
-		empList.add(new Employee(empIdCount++, "나부장", "751103-2987654", "bj_kim@emp.com",  "010-3456-7890", "회계", "부장", 6000000));
-		empList.add(new Employee(empIdCount++, "박과장", "800317-1122334", "kj_lee@emp.com",  "010-2684-9753", "총무", "과장", 5000000));
-		empList.add(new Employee(empIdCount++, "이대리", "900931-2654321", "dr_choi@emp.com", "010-8888-6666", "회계", "대리", 4000000));
-		empList.add(new Employee(empIdCount++, "강사원", "950224-1678423", "sw_park@emp.com", "010-2222-3333", "마케팅", "사원", 3000000));
+		empList.add(new Employee(empIdCount++, "김김김", "550505-1111111", "rla@rla.com", "010-1111-1111", "대표", "회장", 10000000));
+		empList.add(new Employee(empIdCount++, "나나나", "660606-1222222", "sk@sk.com",  "010-2222-2222", "경영", "사장", 9000000));
+		empList.add(new Employee(empIdCount++, "박박박", "770707-1333333", "qkr@qkr.com",  "010-3333-3333", "운영", "부장", 8000000));
+		empList.add(new Employee(empIdCount++, "이이이", "880808-1444444", "dl@dl.com", "010-4444-4444", "영업", "차장", 7000000));
+		empList.add(new Employee(empIdCount++, "강강강", "990909-1555555", "rkd@rkd.com", "010-5555-5555", "회계", "과장", 6000000));
+		empList.add(new Employee(empIdCount++, "최최최", "000101-1666666", "chl@chl.com", "010-6666-6666", "마케팅", "대리", 5000000));
+		empList.add(new Employee(empIdCount++, "고고고", "010202-1777777", "rh@rh.com", "010-7777-7777", "마케팅", "사원", 4000000));
 	}
 	
 	
@@ -119,6 +121,7 @@ public class EmployeeService implements EmployeeService2{
 			return searchList;
 		}
 
+<<<<<<< HEAD
 		// 부서별 급여 합 전체 조회
 		@Override
 		public Map<String, Integer> departmentalSalay() {
@@ -200,4 +203,54 @@ public class EmployeeService implements EmployeeService2{
 	
 	
 	
+=======
+	
+	
+	/** 사원 전체 조회 시 stdList 반환 메서드
+	 * @return
+	 */
+	public List<Employee> getEmpList() {
+		return empList;
+	}
+
+
+
+	public boolean addEmp(Employee emp) {
+		return false;
+	}
+
+	public Object selectAll() {
+		return null;
+	}
+
+	public Object selectEmpNo(int empId) {
+		return null;
+	}
+
+	public Employee updateEmployee(Employee updateEmp) {
+		return updateEmp;
+		
+	}
+
+	public Object selectDepartment(String departmentTitle) {
+		
+		return departmentTitle;
+	}
+
+	public Object selectSalary(int salary) {
+		
+		return salary;
+	}
+
+	public Map<String, Integer> departmentalSalay() {
+		
+		return departmentalSalay();
+	}
+
+	public Employee updateEmployee(int empId) {
+		
+		return null;
+	}
+	
+>>>>>>> 9f5484133fd73376bb5bc35d30375e9b4b40d706
 }
