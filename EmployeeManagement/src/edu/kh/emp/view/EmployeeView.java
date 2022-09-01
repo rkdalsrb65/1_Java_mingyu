@@ -58,20 +58,10 @@ public class EmployeeView implements EmployeeView2 {
 				
 				input = -1; // 첫 반복 시 잘못 입력된 경우 while문이 종료되지 않도록 하는 값
 				sc.nextLine(); // 입력 버퍼에 남아있는 잘못된 문자열을 꺼내와 제거
-			
-			
-			}
-			
-			
+					
+			}		
 			
 		} while(input != 0);
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 	
@@ -112,7 +102,6 @@ public class EmployeeView implements EmployeeView2 {
 		} else {
 			System.out.println("[error] 사원 정보 추가 실패");
 		}
-		
 	}
 	
 	/**
@@ -142,13 +131,7 @@ public class EmployeeView implements EmployeeView2 {
 //		for(Employee e : empList) {
 //			System.out.println(e);
 //		}
-		
-		
 	}
-
-//	private void printAll(Object selectAll) {
-//		
-//	}
 	
 	/**
 	 * 사원 번호가 일치하는 사원 정보 조회
@@ -158,24 +141,9 @@ public class EmployeeView implements EmployeeView2 {
 		int empId = sc.nextInt();
 		
 		Employee result = service.selectEmpNo(empId);
-		
-		
-//		int empId = inputEmpId();
-//		
+			
 		printOne(service.selectEmpNo(empId));
 	}
-
-	
-	
-//	private void printOne(Object selectEmpNo) {
-//		
-//	}
-
-//	private int inputEmpId() {
-//		return 0;
-//	}
-	
-	
 
 	/**
 	 * 사원 번호가 일치하는 사원 정보 수정
@@ -183,14 +151,12 @@ public class EmployeeView implements EmployeeView2 {
 	public void updateEmployee() {
 		System.out.println("<사번이 일치하는 사원 정보 수정>");
 	
-//		int empId = inputEmpId();
 		int empId = sc.nextInt();
 		
 		Employee result = service.selectEmpNo(empId);
 		
 		printOne(service.selectEmpNo(empId));
 		
-
 		if(service.selectEmpNo(empId) == null) {
 			System.out.println("사번이 일치하는 사원이 존재하지 않습니다.");
 	
@@ -221,7 +187,6 @@ public class EmployeeView implements EmployeeView2 {
 			service.updateEmployee(updateEmp);
 			}
 		}
-	
 
 	/**
 	 * 사원 번호가 일치하는 사원 정보 삭제
@@ -248,12 +213,9 @@ public class EmployeeView implements EmployeeView2 {
 				System.out.println(deleteEmp.getEmpName() + "의 정보가 삭제되었습니다.");
 			} else {
 				System.out.println("삭제 취소");
-			}
-			
+			}	
 		}
-		
 	}	
-	
 
 	/**
 	 * 입력 받은 부서와 일치 모든 사원 정보 조회
@@ -265,7 +227,6 @@ public class EmployeeView implements EmployeeView2 {
 		
 		printAll( service.selectDepartment(departmentTitle) );
 	}
-	
 
 	/**
 	 * 입력 받은 급여 이상을 받는 모든 사원 정보 조회
@@ -277,8 +238,6 @@ public class EmployeeView implements EmployeeView2 {
 		
 		printAll( service.selectSalary(salary));
 	}
-	
-	
 
 	/**
 	 * 부서별 급여 합 전체 조회
@@ -292,7 +251,6 @@ public class EmployeeView implements EmployeeView2 {
 		for(String key : map.keySet()) {
 			System.out.printf(" %4s | %d\n", key, map.get(key));
 		}
-		
 	}
 
 	/** 사원 정보 모두 출력
@@ -310,10 +268,8 @@ public class EmployeeView implements EmployeeView2 {
 						emp.getEmpId(), emp.getEmpName(), emp.getEmpNo(), emp.getEmail(), 
 						emp.getPhone(), emp.getDepartmentTitle(), emp.getJobName(), emp.getSalary());
 			}
-		}
-		
+		}	
 	}
-
 
 	/** 사원 정보 1명 출력
 	 * @param emp
@@ -331,8 +287,6 @@ public class EmployeeView implements EmployeeView2 {
 		}
 	}
 
-	
-	
 	/** 사원 번호를 입력 받아 반환하는 메서드
 	 * @return
 	 */
@@ -352,10 +306,5 @@ public class EmployeeView implements EmployeeView2 {
 	public int inputEmpId() {
 		return 0;
 	}	
-	
-	
-	
-	
-	
 	
 }

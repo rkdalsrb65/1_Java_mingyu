@@ -7,29 +7,27 @@ import edu.kh.emp.model.vo.Employee;
 public interface EmployeeView2 {
 
 	
-	/** 메뉴 출력 메서드
+	/**메뉴 출력 메서드
 	 */
 	public abstract void displayMenu();
 	
-	/** 새로운 사원 정보 추가
-	 * <ul>
-	 * <li>사원 번호는 입력 받지 않음.</li>
-	 * <li>EmployeeServiceImpl에 작성되어있는 empIdCount를 사원 번호로 사용</li>
-	 * <li>입력 받은 값을 이용해서 Employee 객체를 생성하여 service로 전달</li>
-	 * <ul>
+	/**새로운 사원 정보 추가
+	 * 사원 번호는 입력 받지 않음.
+	 * EmployeeServiceImpl에 작성되어있는 empIdCount를 사원 번호로 사용
+	 * 입력 받은 값을 이용해서 Employee 객체를 생성하여 service로 전달
+	 * 
 	 */
 	public abstract void addEmployee();
 	
-	/** 전체 사원 조회
+	/**전체 사원 조회
 	 * service에서 얻어온 empList를 printAll() 메서드를 이용해서 출력
 	 */
 	public abstract void selectAll();
 	
-	/** 사번이 일치하는 사원 정보 조회
-	 * <p>사번을 입력 받아 service에 전달 후 반환 받은 값을 printOne 메서드를 이용해서 출력</p>
+	/**사번이 일치하는 사원 정보 조회
+	 * 사번을 입력 받아 service에 전달 후 반환 받은 값을 printOne 메서드를 이용해서 출력
 	 */
-	public abstract void selectEmpId();
-	
+	public abstract void selectEmpId();	
 	
 	/**
 	 * 사번이 일치하는 사원 정보 수정
@@ -62,20 +60,20 @@ public interface EmployeeView2 {
 	//-------------------------------------------------------------
 	// 공용 메서드
 	
-	/** 사원 정보 모두 출력
+	/**사원 정보 모두 출력
 	 * 전달 받은 empList의 있는 내용을 향상된 for문을 이용해 모두 출력
 	 * @param empList
 	 */
 	public abstract void printAll(List<Employee> empList);
 	
-	/** 사원 정보 1명 출력
+	/**사원 정보 1명 출력
 	 * 전달 받은 emp 객체의 정보를 출력
 	 * @Param emp
 	 */
 	public abstract void printOne(Employee emp);
 	
 	
-	/** 사원 번호를 입력 받아 반환하는 메서드
+	/**사원 번호를 입력 받아 반환하는 메서드
 	 * @return empNo
 	 */
 	public abstract int inputEmpId();
