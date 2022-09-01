@@ -332,13 +332,11 @@ public class EmployeeView implements EmployeeView2 {
 
 	@Override
 	public void addEmployee() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int inputEmpId() {
-		// TODO Auto-generated method stub
 		return 0;
 	}	
 	
